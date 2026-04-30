@@ -1,0 +1,804 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="index, follow">
+<title>Terms of Service · Pace</title>
+<meta name="description" content="Terms of service for the Pace iOS app and usepace.fit website.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2220%22 fill=%22%23F0A040%22/><path d=%22M20 70 L40 50 L55 60 L80 30%22 stroke=%22white%22 stroke-width=%228%22 fill=%22none%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22/></svg>">
+<style>
+* { box-sizing: border-box; }
+
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  background: #FAF8F5;
+  color: #1A1A1A;
+  line-height: 1.65;
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Sticky header */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(250, 248, 245, 0.92);
+  backdrop-filter: saturate(180%) blur(10px);
+  -webkit-backdrop-filter: saturate(180%) blur(10px);
+  border-bottom: 1px solid #E8E2D4;
+}
+
+.site-header-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 14px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  color: #1A1A1A;
+  font-weight: 600;
+  font-size: 17px;
+  letter-spacing: -0.01em;
+}
+
+.brand-mark {
+  width: 28px;
+  height: 28px;
+  border-radius: 8px;
+  background: #F0A040;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav {
+  display: flex;
+  gap: 8px;
+}
+
+.nav a {
+  font-size: 14px;
+  color: #5A5A5A;
+  text-decoration: none;
+  padding: 6px 12px;
+  border-radius: 8px;
+  font-weight: 500;
+  transition: all 0.15s ease;
+}
+
+.nav a:hover {
+  background: rgba(240, 160, 64, 0.1);
+  color: #1A1A1A;
+}
+
+.nav a.active {
+  background: rgba(240, 160, 64, 0.15);
+  color: #BA7517;
+}
+
+/* Layout */
+.layout {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 32px 24px 80px;
+  display: grid;
+  grid-template-columns: 240px 1fr;
+  gap: 56px;
+}
+
+@media (max-width: 860px) {
+  .layout {
+    grid-template-columns: 1fr;
+    gap: 24px;
+    padding: 24px 20px 60px;
+  }
+}
+
+/* TOC sidebar */
+.toc {
+  position: sticky;
+  top: 80px;
+  align-self: start;
+  font-size: 13px;
+  line-height: 1.5;
+  max-height: calc(100vh - 100px);
+  overflow-y: auto;
+}
+
+.toc-title {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #BA7517;
+  margin-bottom: 12px;
+}
+
+.toc ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  border-left: 1px solid #E8E2D4;
+}
+
+.toc li {
+  margin: 0;
+}
+
+.toc a {
+  display: block;
+  padding: 6px 14px;
+  color: #5A5A5A;
+  text-decoration: none;
+  border-left: 2px solid transparent;
+  margin-left: -1px;
+  transition: all 0.15s ease;
+}
+
+.toc a:hover {
+  color: #1A1A1A;
+  border-left-color: #F0A040;
+  background: rgba(240, 160, 64, 0.04);
+}
+
+@media (max-width: 860px) {
+  .toc {
+    position: static;
+    max-height: none;
+    background: white;
+    border: 1px solid #E8E2D4;
+    border-radius: 12px;
+    padding: 16px;
+  }
+  .toc ul { border-left: none; }
+  .toc a { padding: 4px 0; border-left: none; margin-left: 0; }
+}
+
+/* Main content */
+.content {
+  min-width: 0;
+  max-width: 720px;
+}
+
+.doc-header {
+  border-bottom: 1px solid #E8E2D4;
+  padding-bottom: 24px;
+  margin-bottom: 32px;
+}
+
+.doc-meta {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  font-size: 13px;
+  color: #5A5A5A;
+  margin-top: 12px;
+}
+
+.doc-meta-item strong {
+  color: #1A1A1A;
+  font-weight: 600;
+}
+
+.version-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 10px;
+  background: rgba(240, 160, 64, 0.12);
+  color: #BA7517;
+  border-radius: 100px;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+
+/* Typography */
+.content h1 {
+  font-size: 34px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 1.15;
+  margin: 0 0 8px;
+  color: #1A1A1A;
+}
+
+.content h2 {
+  font-size: 22px;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  line-height: 1.3;
+  margin: 48px 0 16px;
+  color: #1A1A1A;
+  scroll-margin-top: 80px;
+}
+
+.content h3 {
+  font-size: 17px;
+  font-weight: 600;
+  margin: 28px 0 12px;
+  color: #1A1A1A;
+  scroll-margin-top: 80px;
+}
+
+.content h4 {
+  font-size: 15px;
+  font-weight: 600;
+  margin: 20px 0 8px;
+  color: #1A1A1A;
+}
+
+.content p {
+  margin: 0 0 16px;
+  font-size: 16px;
+  line-height: 1.65;
+}
+
+.content a {
+  color: #BA7517;
+  text-decoration: underline;
+  text-decoration-color: rgba(186, 117, 23, 0.3);
+  text-underline-offset: 3px;
+  transition: all 0.15s ease;
+}
+
+.content a:hover {
+  text-decoration-color: #BA7517;
+}
+
+.content ul, .content ol {
+  margin: 0 0 16px;
+  padding-left: 24px;
+}
+
+.content li {
+  margin: 6px 0;
+  line-height: 1.6;
+}
+
+.content strong {
+  font-weight: 600;
+  color: #1A1A1A;
+}
+
+.content em {
+  font-style: italic;
+}
+
+.content hr {
+  border: none;
+  border-top: 1px solid #E8E2D4;
+  margin: 48px 0;
+}
+
+/* Tables */
+.content table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+  font-size: 14px;
+  background: white;
+  border: 1px solid #E8E2D4;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.content th {
+  text-align: left;
+  padding: 12px 16px;
+  background: rgba(240, 160, 64, 0.08);
+  font-weight: 600;
+  color: #1A1A1A;
+  border-bottom: 1px solid #E8E2D4;
+  font-size: 13px;
+  letter-spacing: 0.01em;
+}
+
+.content td {
+  padding: 12px 16px;
+  border-bottom: 1px solid #F0EBE0;
+  vertical-align: top;
+}
+
+.content tr:last-child td {
+  border-bottom: none;
+}
+
+/* Code */
+.content code {
+  background: rgba(240, 160, 64, 0.1);
+  color: #BA7517;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-family: "SF Mono", Menlo, Consolas, monospace;
+  font-size: 13px;
+}
+
+/* Footer */
+.site-footer {
+  border-top: 1px solid #E8E2D4;
+  padding: 32px 24px;
+  text-align: center;
+  font-size: 13px;
+  color: #5A5A5A;
+}
+
+.site-footer a {
+  color: #5A5A5A;
+  text-decoration: none;
+  margin: 0 12px;
+}
+
+.site-footer a:hover {
+  color: #BA7517;
+}
+
+/* Hide HTML comments visually */
+.content > *:first-child { margin-top: 0; }
+
+/* Print styles */
+@media print {
+  .site-header, .toc, .site-footer { display: none; }
+  .layout { grid-template-columns: 1fr; padding: 0; }
+  body { background: white; }
+  .arbitration-box { border: 2px solid #F0A040 !important; }
+}
+
+/* Section 16 (Terms of Service · Mandatory Arbitration) — conspicuous treatment
+   per AT&T Mobility v. Concepcion enforceability standards.
+   Visible boxed border, light amber background, larger heading, bold class waiver. */
+.arbitration-box {
+  margin: 56px 0 48px;
+  padding: 28px 28px 24px;
+  background: rgba(240, 160, 64, 0.05);
+  border: 2px solid #F0A040;
+  border-radius: 12px;
+  scroll-margin-top: 80px;
+}
+.arbitration-box h2 {
+  font-size: 26px !important;
+  margin-top: 0 !important;
+  margin-bottom: 8px;
+  color: #1A1A1A;
+}
+.arbitration-box .arbitration-warning {
+  font-size: 15px;
+  font-weight: 600;
+  color: #BA7517;
+  margin: 0 0 24px;
+  letter-spacing: 0.01em;
+}
+.arbitration-box h3 {
+  margin-top: 28px !important;
+}
+/* Class action waiver paragraph (16.2) — strong emphasis treatment */
+.arbitration-box .class-action-waiver {
+  display: block;
+  padding: 16px 18px;
+  background: rgba(240, 160, 64, 0.14);
+  border-left: 4px solid #F0A040;
+  border-radius: 6px;
+  margin: 12px 0;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.55;
+}
+/* TOC bold + amber treatment for Section 16 link */
+.toc a[href*="16-mandatory-arbitration"] {
+  font-weight: 700;
+  color: #BA7517;
+}
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="site-header-inner">
+    <a href="/" class="brand">
+      <span class="brand-mark">
+        <svg width="16" height="16" viewBox="0 0 100 100" fill="none">
+          <path d="M20 70 L40 50 L55 60 L80 30" stroke="white" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </span>
+      Pace
+    </a>
+    <nav class="nav">
+      <a href="/privacy.html" class="">Privacy</a>
+      <a href="/health-privacy.html" class="">Health Data</a>
+      <a href="/terms.html" class="active">Terms</a>
+    </nav>
+  </div>
+</header>
+
+<main class="layout">
+  <aside class="toc" aria-label="Table of contents">
+    <div class="toc-title">On this page</div>
+    <ul>
+      <li><a href="#a-note-before-you-read">A note before you read</a></li>
+      <li><a href="#1-who-we-are-and-what-these-terms-cover">1. Who we are and what these terms cover</a></li>
+      <li><a href="#2-eligibility">2. Eligibility</a></li>
+      <li><a href="#3-your-account">3. Your account</a></li>
+      <li><a href="#4-the-services-what-pace-is-and-is-not">4. The Services — what Pace is and is not</a></li>
+      <li><a href="#5-beta-program-acknowledgment">5. Beta program acknowledgment</a></li>
+      <li><a href="#6-ai-generated-content-disclaimer">6. AI-generated content disclaimer</a></li>
+      <li><a href="#7-subscriptions-and-payments">7. Subscriptions and payments</a></li>
+      <li><a href="#8-acceptable-use">8. Acceptable use</a></li>
+      <li><a href="#9-your-content">9. Your content</a></li>
+      <li><a href="#10-paces-intellectual-property">10. Pace's intellectual property</a></li>
+      <li><a href="#11-feedback">11. Feedback</a></li>
+      <li><a href="#12-privacy">12. Privacy</a></li>
+      <li><a href="#13-disclaimer-of-warranties">13. Disclaimer of warranties</a></li>
+      <li><a href="#14-limitation-of-liability">14. Limitation of liability</a></li>
+      <li><a href="#15-indemnification">15. Indemnification</a></li>
+      <li><a href="#16-mandatory-arbitration-and-class-action-waiver-please-read-carefully">16. MANDATORY ARBITRATION AND CLASS ACTION WAIVER — PLEASE READ CAREFULLY</a></li>
+      <li><a href="#17-termination">17. Termination</a></li>
+      <li><a href="#18-governing-law">18. Governing law</a></li>
+      <li><a href="#19-force-majeure">19. Force majeure</a></li>
+      <li><a href="#20-modifications-to-the-services-and-terms">20. Modifications to the Services and Terms</a></li>
+      <li><a href="#21-apple-specific-terms">21. Apple-specific terms</a></li>
+      <li><a href="#22-general-provisions">22. General provisions</a></li>
+      <li><a href="#23-contact-us">23. Contact us</a></li>
+    </ul>
+  </aside>
+
+  <article class="content">
+    <header class="doc-header">
+      <div class="version-badge">Version 1.0</div>
+      <h1>Terms of Service</h1>
+      <div class="doc-meta">
+        <span class="doc-meta-item"><strong>Effective:</strong> April 29, 2026</span>
+        <span class="doc-meta-item"><strong>Last updated:</strong> April 29, 2026</span>
+      </div>
+    </header>
+
+    <!--
+WHY THESE TERMS EXIST:
+This is the Pace Terms of Service ("ToS"), governing the contractual relationship between Pace users and Born in Tokyo Digital LLC. These terms are designed to maximize founder protection within the constraints of:
+
+1. Apple App Store Review Guidelines (auto-renewing subscription disclosures, refund pointers, parental controls)
+2. Federal Arbitration Act (9 U.S.C. § 1 et seq.) — establishes enforceability of arbitration agreements
+3. Minnesota law — governs the contractual relationship; certain consumer protections are non-waivable
+4. State consumer protection statutes that void specific clauses (notably California Civ. Code § 1668 voiding waivers of liability for fraud, willful injury, or violation of law; California consumer arbitration cost-shifting requirements; certain state requirements for class action waiver disclosure)
+
+WHERE PROTECTIONS ARE CONSTRAINED BY LAW: Inline notes flag what was attempted and what was excluded. The June 2026 attorney engagement should pressure-test enforceability of every limitation in this ToS against current Minnesota and multi-state consumer protection law.
+
+DRAFTING NOTE: This is v1.0 for the TestFlight closed-beta phase. This ToS will be reviewed and updated by retained legal counsel before public App Store launch. The June attorney should specifically scrutinize: (a) arbitration clause enforceability under McGill v. Citibank in California, (b) liability cap enforceability under Minn. Stat. § 8.31, (c) class action waiver under recent Supreme Court precedent, (d) jury trial waiver enforceability, (e) one-sided modification rights enforceability, (f) FTC's 2024 negative-option rules and 2026 updates affecting subscription auto-renewal disclosure.
+-->
+
+<hr />
+<h2 id="a-note-before-you-read">A note before you read</h2>
+<p>These Terms of Service are a legal contract between you and Born in Tokyo Digital LLC (the company that operates Pace). They include important provisions that affect your legal rights — most importantly, a <strong>mandatory binding arbitration clause and class action waiver in Section 16</strong> that limits how disputes between you and Pace can be resolved.</p>
+<p>Please read these terms carefully. By creating an account, downloading Pace, or using the Services, you agree to be bound by these terms. If you do not agree, do not download, install, or use Pace.</p>
+<p>If you have questions, email <strong>support@usepace.fit</strong>.</p>
+<hr />
+<h2 id="1-who-we-are-and-what-these-terms-cover">1. Who we are and what these terms cover</h2>
+<p>These Terms of Service ("<strong>Terms</strong>" or "<strong>ToS</strong>") are entered into between you and <strong>Born in Tokyo Digital LLC</strong>, a Minnesota limited liability company doing business as Pace ("<strong>Pace</strong>," "<strong>we</strong>," "<strong>us</strong>," or "<strong>our</strong>"). They govern your access to and use of the Pace iOS application, the usepace.fit website, and any related services, features, content, and applications offered by Pace (collectively, the "<strong>Services</strong>").</p>
+<p>Our <strong><a href="/privacy.html">Privacy Policy</a></strong> and our <strong><a href="/health-privacy.html">Consumer Health Data Privacy Policy</a></strong> describe how we collect and use your information and are incorporated into these Terms by reference.</p>
+<p>These Terms are supplemented, but not replaced, by Apple's standard End User License Agreement applicable to apps distributed through the App Store and TestFlight.</p>
+<hr />
+<h2 id="2-eligibility">2. Eligibility</h2>
+<p>To create an account or use the Services, you must:</p>
+<ul>
+<li>Be at least 18 years of age during the TestFlight beta period</li>
+<li>Be capable of forming a legally binding contract under applicable law</li>
+<li>Be physically located in the United States</li>
+<li>Not be barred from receiving the Services under any applicable law (including, where applicable, U.S. economic sanctions regulations)</li>
+<li>Not have previously been suspended or removed from the Services</li>
+</ul>
+<p>Pace is currently offered only to invited testers participating in the TestFlight closed beta and only to users physically located in the United States. If you are located outside the United States, do not download, register for, or use the Services.</p>
+<p>If we reasonably believe you do not meet the eligibility requirements, we may suspend or terminate your account.</p>
+<hr />
+<h2 id="3-your-account">3. Your account</h2>
+<p>You are responsible for:</p>
+<ul>
+<li>Maintaining the confidentiality of any authentication credentials used to access your account (including Sign in with Apple credentials)</li>
+<li>All activity that occurs under your account</li>
+<li>Notifying us promptly at security@usepace.fit if you become aware of any unauthorized use of your account</li>
+</ul>
+<p>We are not liable for any loss or damage arising from unauthorized access to your account caused by your failure to maintain account security.</p>
+<hr />
+<h2 id="4-the-services-what-pace-is-and-is-not">4. The Services — what Pace is and is not</h2>
+<p>Pace provides AI-powered nutrition tracking, fitness coaching, and tools that bring your health data together from multiple sources. The Services are designed to help you understand and manage your own health and fitness practices.</p>
+<p><strong>Pace is NOT a medical device.</strong> Pace does not diagnose, treat, cure, prevent, or mitigate any medical condition. Pace is not a substitute for professional medical advice, diagnosis, or treatment. The Services are for general informational and personal wellness purposes only.</p>
+<p><strong>Always consult a licensed medical professional</strong> for medical advice, diagnosis, or treatment of any health condition. Never disregard professional medical advice or delay seeking it because of something you read or learned through the Services.</p>
+<p><strong>The Pace coach is an AI assistant</strong>, not a registered dietitian, certified nutritionist, personal trainer, physician, or other licensed professional. The coach's responses are generated by automated systems and may contain errors, omissions, or inaccuracies. You are solely responsible for evaluating any information provided through the Services and for any actions you take based on that information.</p>
+<p>If you are pregnant, nursing, taking medication, have any medical condition, or are considering any change to your diet, exercise, or wellness routine, consult a qualified medical professional before relying on the Services.</p>
+<p>In an emergency, call 911 or your local emergency services. Do not rely on the Services in any emergency situation.</p>
+<hr />
+<h2 id="5-beta-program-acknowledgment">5. Beta program acknowledgment</h2>
+<p>You acknowledge and agree that during the TestFlight closed beta:</p>
+<ul>
+<li>The Services are pre-release software and may contain bugs, errors, defects, missing features, or unexpected behavior</li>
+<li>The Services may be modified, suspended, or discontinued at any time without prior notice</li>
+<li>Data loss, including loss of your food logs, coach conversations, exercise records, and other content, is possible</li>
+<li>There is no guaranteed uptime, no service level agreement, and no commitment to maintain any particular feature or functionality</li>
+<li>Features, pricing, terms, and policies may change before public release</li>
+<li>Your feedback may be used by Pace to improve the Services without compensation to you</li>
+</ul>
+<p>You participate in the beta at your own risk and acknowledge that beta software carries risks not present in commercial-release software.</p>
+<hr />
+<h2 id="6-ai-generated-content-disclaimer">6. AI-generated content disclaimer</h2>
+<p>The Services use artificial intelligence systems operated by third parties (including but not limited to Anthropic, xAI, OpenAI, and OpenRouter) to generate content, analyze food photos, identify nutrition information, and provide coach responses.</p>
+<p>You acknowledge and agree that:</p>
+<ul>
+<li>AI-generated content <strong>may be inaccurate, incomplete, biased, or otherwise erroneous</strong></li>
+<li>AI-generated nutritional estimates (calories, macronutrients, micronutrients) <strong>are estimates only</strong> and may differ materially from actual values</li>
+<li>AI-generated coach responses <strong>are not medical, nutritional, or fitness advice</strong> and should not be relied upon as such</li>
+<li>You are <strong>solely responsible</strong> for verifying any AI-generated content before acting on it</li>
+<li>Pace makes no representation that any AI output is accurate, fit for any particular purpose, or suitable for your specific circumstances</li>
+</ul>
+<p>If accurate nutritional information is critical for your health (for example, due to diabetes, food allergies, eating disorders, or other medical conditions), do not rely on the Services as your sole source. Consult a registered dietitian or qualified medical professional and verify nutritional information through trusted primary sources.</p>
+<hr />
+<h2 id="7-subscriptions-and-payments">7. Subscriptions and payments</h2>
+<!-- POST-LAUNCH SECTION: This section governs subscription billing for the post-launch product. During TestFlight beta, the Services are provided free of charge and no subscription is required. -->
+
+<p>If and when Pace offers paid subscriptions:</p>
+<ul>
+<li>Subscriptions are sold through the Apple App Store using Apple's in-app purchase system</li>
+<li>Apple processes all payments. Pace does not receive your payment card information</li>
+<li>Subscription pricing, billing cycles, free trial duration, and other terms are presented at the point of purchase and through Apple's standard subscription management interface</li>
+<li>All subscriptions auto-renew unless canceled at least 24 hours before the end of the current billing period through your Apple ID Subscription settings</li>
+<li>Refunds, cancellations, and billing disputes are handled by Apple per Apple's standard policies. To request a refund, visit reportaproblem.apple.com</li>
+<li>Pace does not control Apple's refund decisions and is not responsible for Apple's refund policy</li>
+</ul>
+<p>You are responsible for any charges incurred through your account.</p>
+<hr />
+<h2 id="8-acceptable-use">8. Acceptable use</h2>
+<p>You agree not to:</p>
+<ul>
+<li>Use the Services in any way that violates any applicable law, regulation, or third-party right</li>
+<li>Use the Services for any commercial purpose other than your own personal use (no resale, no white-labeling, no offering Pace's outputs as a service to others)</li>
+<li>Reverse engineer, decompile, disassemble, or otherwise attempt to derive source code from the Services</li>
+<li>Scrape, crawl, harvest, or extract data from the Services through automated means</li>
+<li>Circumvent or attempt to circumvent any security, access control, rate limiting, or content protection mechanism</li>
+<li>Interfere with or disrupt the integrity or performance of the Services or the data they contain</li>
+<li>Attempt to gain unauthorized access to the Services, other user accounts, or Pace's systems</li>
+<li>Submit content that is unlawful, harassing, abusive, defamatory, obscene, fraudulent, deceptive, or that infringes the intellectual property rights of others</li>
+<li>Submit content that contains malware, viruses, or other harmful code</li>
+<li>Use the Services to develop, train, or improve any artificial intelligence model or service that competes with Pace</li>
+<li>Permit any person under 18 to use your account during the TestFlight beta</li>
+<li>Misrepresent your identity, affiliation, or location</li>
+</ul>
+<p>Violation of this Section may result in immediate suspension or termination of your account, with or without notice.</p>
+<hr />
+<h2 id="9-your-content">9. Your content</h2>
+<p>"<strong>Your Content</strong>" means any content you submit to the Services, including food entries, photos, coach messages, exercise logs, profile information, and feedback.</p>
+<p><strong>You retain ownership of Your Content.</strong> You grant Pace a worldwide, non-exclusive, royalty-free, sublicensable, transferable license to use, store, reproduce, modify, create derivative works from, transmit, display, and process Your Content solely for the purposes of:</p>
+<ul>
+<li>Providing, operating, maintaining, and improving the Services</li>
+<li>Generating AI responses, analyses, and other outputs based on Your Content</li>
+<li>Backing up, archiving, and securing Your Content</li>
+<li>Complying with legal obligations</li>
+<li>Defending Pace's legal rights</li>
+</ul>
+<p>This license terminates when you delete Your Content or your account, except (i) for content already shared with third-party AI providers under our Privacy Policy, where deletion is governed by those providers' retention policies, and (ii) for backup copies subject to deletion in our ordinary backup cycle.</p>
+<p>You represent and warrant that:</p>
+<ul>
+<li>You own or have the necessary rights to submit Your Content</li>
+<li>Your Content does not violate the rights of any third party</li>
+<li>Your Content does not violate any applicable law or these Terms</li>
+</ul>
+<p>You are solely responsible for Your Content and the consequences of submitting it.</p>
+<hr />
+<h2 id="10-paces-intellectual-property">10. Pace's intellectual property</h2>
+<p>The Services, including all software, designs, text, graphics, logos, icons, audio, video, data compilations, AI prompts and prompt configurations, and the selection and arrangement thereof, are owned by or licensed to Born in Tokyo Digital LLC and are protected by intellectual property laws.</p>
+<p>The name "Pace" is a trademark of Born in Tokyo Digital LLC. "Born in Tokyo Digital" and the Pace logo and design elements are also marks used by Born in Tokyo Digital LLC. You may not use these names, marks, or design elements without our prior written consent.</p>
+<p>We grant you a limited, non-exclusive, non-transferable, revocable license to use the Services solely for your own personal, non-commercial use, subject to these Terms. All rights not expressly granted are reserved.</p>
+<hr />
+<h2 id="11-feedback">11. Feedback</h2>
+<p>If you provide Pace with feedback, suggestions, ideas, or recommendations regarding the Services ("<strong>Feedback</strong>"), you grant Pace a perpetual, irrevocable, worldwide, royalty-free, sublicensable, transferable license to use, modify, reproduce, distribute, and exploit the Feedback for any purpose, without compensation or attribution to you. You waive any moral rights or similar rights in the Feedback to the extent permitted by applicable law.</p>
+<hr />
+<h2 id="12-privacy">12. Privacy</h2>
+<p>Our <strong><a href="/privacy.html">Privacy Policy</a></strong> describes how we collect, use, share, and protect your personal information. Our <strong><a href="/health-privacy.html">Consumer Health Data Privacy Policy</a></strong> provides additional disclosures required by the Washington My Health My Data Act. Both policies are incorporated into these Terms by reference.</p>
+<hr />
+<h2 id="13-disclaimer-of-warranties">13. Disclaimer of warranties</h2>
+<!-- THIS SECTION IS DRAFTED FOR MAXIMUM ENFORCEABILITY UNDER MINNESOTA AND FEDERAL LAW. Certain warranty waivers are constrained by California Civ. Code § 1668 (cannot waive liability for fraud, willful injury, or violation of law) and certain state implied-warranty statutes. June attorney should pressure-test specific state limitations. -->
+
+<p><strong>THE SERVICES ARE PROVIDED "AS IS" AND "AS AVAILABLE," WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED.</strong></p>
+<p>To the fullest extent permitted by applicable law, Pace and its officers, members, employees, agents, suppliers, and licensors disclaim all warranties, express or implied, including but not limited to:</p>
+<ul>
+<li>Implied warranties of merchantability, fitness for a particular purpose, title, and non-infringement</li>
+<li>Any warranty that the Services will be uninterrupted, error-free, secure, or available at any particular time or location</li>
+<li>Any warranty regarding the accuracy, reliability, completeness, timeliness, or quality of any content, including AI-generated content, nutritional estimates, or coach responses</li>
+<li>Any warranty that the Services will meet your requirements or expectations</li>
+<li>Any warranty regarding the results that may be obtained from the use of the Services</li>
+</ul>
+<p>You acknowledge that the Services rely on third-party AI systems, third-party data sources (including the USDA FoodData Central database), and third-party infrastructure providers, and that Pace makes no warranty regarding the performance, availability, or accuracy of any such third party.</p>
+<p><strong>SOME JURISDICTIONS DO NOT ALLOW THE EXCLUSION OF CERTAIN IMPLIED WARRANTIES, SO SOME OF THE ABOVE EXCLUSIONS MAY NOT APPLY TO YOU. IN THAT CASE, ANY WARRANTIES ARE LIMITED TO THE MAXIMUM EXTENT PERMITTED BY LAW.</strong></p>
+<hr />
+<h2 id="14-limitation-of-liability">14. Limitation of liability</h2>
+<!-- LIABILITY CAP DRAFTED AT THE LESSER OF $100 OR AMOUNTS PAID IN PRIOR 12 MONTHS, PER CEO REQUEST. ENFORCEABILITY VARIES BY JURISDICTION. California Civ. Code § 1668 voids any contract clause that exempts a party from responsibility for fraud, willful injury, or violation of law (whether negligent or willful). Minnesota allows liability caps but voids them for gross negligence and willful misconduct. Federal consumer protection law may further constrain. June attorney scope. -->
+
+<p><strong>TO THE FULLEST EXTENT PERMITTED BY APPLICABLE LAW:</strong></p>
+<p><strong>(A) Excluded damages.</strong> In no event will Pace, its officers, members, employees, agents, suppliers, or licensors be liable for any indirect, incidental, special, consequential, exemplary, or punitive damages, including but not limited to damages for loss of profits, loss of revenue, loss of data, loss of goodwill, business interruption, personal injury (other than as required by law), or any other intangible loss, arising out of or in connection with your use of or inability to use the Services, regardless of the legal theory (whether contract, tort, statute, or otherwise), even if Pace has been advised of the possibility of such damages.</p>
+<p><strong>(B) Aggregate liability cap.</strong> The total aggregate liability of Pace and its officers, members, employees, agents, suppliers, and licensors arising out of or related to these Terms or the Services will not exceed the <strong>lesser of (i) the total amount you paid to Pace for the Services in the twelve (12) months preceding the event giving rise to the claim, or (ii) one hundred U.S. dollars ($100.00)</strong>.</p>
+<p><strong>(C) Carve-outs.</strong> Nothing in these Terms limits or excludes liability for: (i) death or personal injury caused by Pace's negligence; (ii) Pace's fraud or fraudulent misrepresentation; (iii) any other liability that cannot be limited or excluded by applicable law.</p>
+<p><strong>(D) Application during free beta.</strong> During the TestFlight closed beta, the Services are provided free of charge. The aggregate liability cap in (B)(i) therefore equals zero, and the cap in (B)(ii) of $100.00 applies as the maximum.</p>
+<p><strong>(E) Allocation of risk.</strong> You acknowledge that the disclaimers and limitations in Sections 13 and 14 reflect a reasonable allocation of risk between you and Pace, that the pricing of the Services (or absence thereof during beta) reflects this allocation, and that Pace would not provide the Services without these limitations.</p>
+<p><strong>SOME JURISDICTIONS DO NOT ALLOW THE EXCLUSION OR LIMITATION OF CERTAIN DAMAGES, SO SOME OF THE ABOVE LIMITATIONS MAY NOT APPLY TO YOU. IN THAT CASE, LIABILITY IS LIMITED TO THE MAXIMUM EXTENT PERMITTED BY LAW.</strong></p>
+<hr />
+<h2 id="15-indemnification">15. Indemnification</h2>
+<p>You agree to indemnify, defend, and hold harmless Pace and its officers, members, employees, agents, suppliers, and licensors from and against any and all claims, liabilities, damages, losses, costs, and expenses (including reasonable attorneys' fees) arising out of or related to:</p>
+<ul>
+<li>Your use or misuse of the Services</li>
+<li>Your violation of these Terms or any applicable law</li>
+<li>Your Content or any third-party claims related to Your Content</li>
+<li>Your infringement or violation of any third-party right</li>
+<li>Any decisions you make or actions you take based on AI-generated content, nutritional estimates, coach responses, or any other content from the Services</li>
+</ul>
+<p>Pace reserves the right to assume the exclusive defense and control of any matter for which you are obligated to indemnify Pace, in which case you agree to cooperate with Pace's defense.</p>
+<hr />
+<div class="arbitration-box">
+<h2 id="16-mandatory-arbitration-and-class-action-waiver-please-read-carefully">16. <strong>MANDATORY ARBITRATION AND CLASS ACTION WAIVER — PLEASE READ CAREFULLY</strong></h2>
+<!--
+ARBITRATION CLAUSE DRAFTED FOR MAXIMUM ENFORCEABILITY UNDER FEDERAL ARBITRATION ACT. Specific concerns to flag for June attorney:
+
+1. McGill v. Citibank (California) — public injunctive relief cannot be waived in arbitration. Carve-out included below in subsection (G).
+2. Recent state legislative activity (e.g., New Jersey, several others) restricting consumer arbitration in specific contexts. Mass arbitration provisions becoming more common to limit exposure to coordinated claims. Not included in v1.0 but flagged for June.
+3. JAMS vs AAA selection — JAMS chosen as administrator due to lower consumer arbitration cost-shifting risk. June attorney should confirm current rules.
+4. Opt-out window — 30 days included to strengthen unconscionability defense. Some plaintiff arguments treat absence of opt-out as procedural unconscionability factor.
+5. Survival clause included to protect arbitration agreement enforceability post-termination.
+-->
+
+<p class="arbitration-warning"><strong>Please read this Section carefully. It affects your legal rights, including your right to file a lawsuit in court and your right to a jury trial.</strong></p>
+<h3 id="161-agreement-to-arbitrate">16.1 Agreement to arbitrate</h3>
+<p>You and Pace agree that any dispute, claim, or controversy arising out of or relating to these Terms, the Privacy Policy, the Consumer Health Data Privacy Policy, the Services, or your relationship with Pace (collectively, "<strong>Disputes</strong>") will be resolved exclusively through <strong>final and binding individual arbitration</strong>, rather than in court, except as set forth in Sections 16.7 and 16.8.</p>
+<p>This agreement to arbitrate is governed by the Federal Arbitration Act, 9 U.S.C. § 1 et seq. The arbitrator, and not any court, has exclusive authority to resolve any dispute relating to the interpretation, applicability, enforceability, or formation of this arbitration agreement, including any claim that all or any part of this arbitration agreement is void or voidable.</p>
+<h3 id="162-class-action-waiver">16.2 Class action waiver</h3>
+<p class="class-action-waiver"><strong>YOU AND PACE AGREE THAT EACH MAY BRING CLAIMS AGAINST THE OTHER ONLY IN AN INDIVIDUAL CAPACITY, AND NOT AS A PLAINTIFF OR CLASS MEMBER IN ANY PURPORTED CLASS, COLLECTIVE, OR REPRESENTATIVE PROCEEDING.</strong></p>
+<p>The arbitrator may not consolidate more than one person's claims and may not preside over any form of representative or class proceeding.</p>
+<p>If a court determines that this class action waiver is unenforceable as to any specific claim or request for relief, then that claim or request must be litigated in a court of competent jurisdiction, but the rest of this Section 16 will remain in full force.</p>
+<h3 id="163-jury-trial-waiver">16.3 Jury trial waiver</h3>
+<p><strong>YOU AND PACE EACH WAIVE ANY RIGHT TO A JURY TRIAL</strong> in any matter arising out of or related to these Terms or the Services, to the fullest extent permitted by applicable law.</p>
+<h3 id="164-informal-resolution-before-arbitration">16.4 Informal resolution before arbitration</h3>
+<p>Before initiating arbitration, you must first send Pace a written notice of the Dispute by email to <strong>legal@usepace.fit</strong> that describes (a) the nature and basis of the Dispute, (b) the specific relief sought, and (c) your name, account email, and contact information. We will attempt to resolve the Dispute informally for at least 60 days after our receipt of the notice. If we cannot resolve the Dispute within that 60-day period, either party may proceed to arbitration.</p>
+<h3 id="165-arbitration-administrator-and-rules">16.5 Arbitration administrator and rules</h3>
+<p>Arbitration will be administered by <strong>JAMS</strong> (Judicial Arbitration and Mediation Services) under JAMS's then-current Streamlined Arbitration Rules (or, if the amount in controversy exceeds the threshold for Streamlined Rules, JAMS's Comprehensive Arbitration Rules). JAMS's rules are available at jamsadr.com.</p>
+<p>If JAMS is unavailable to administer the arbitration consistent with the rules and procedures specified in this Section, the parties will select an alternative arbitration administrator by mutual agreement.</p>
+<h3 id="166-arbitration-location-costs-and-procedures">16.6 Arbitration location, costs, and procedures</h3>
+<ul>
+<li>The arbitration will be conducted in <strong>English</strong> by a single arbitrator selected per JAMS rules.</li>
+<li>The arbitration will be held in <strong>Hennepin County, Minnesota</strong>, or by videoconference if the arbitrator orders or the parties agree, or in any other location mutually agreed by the parties.</li>
+<li><strong>Costs of arbitration</strong>: Pace will pay the JAMS filing fee and the arbitrator's compensation to the extent required to make this arbitration agreement enforceable under applicable consumer arbitration cost-allocation principles. You are responsible for your own attorneys' fees and costs unless the arbitrator awards them.</li>
+<li>The arbitrator will apply the substantive law specified in Section 18 (Governing Law) and may award any individual relief that a court could award, including injunctive relief on an individual basis.</li>
+<li>The arbitrator's award will be final and binding, and judgment on the award may be entered in any court of competent jurisdiction.</li>
+</ul>
+<h3 id="167-exception-for-small-claims">16.7 Exception for small claims</h3>
+<p>Notwithstanding this Section 16, either party may bring an individual action in <strong>small claims court</strong> for claims that fall within the small claims court's jurisdictional limits, provided the action proceeds only in that court and on an individual (non-class) basis.</p>
+<h3 id="168-exception-for-injunctive-relief-regarding-intellectual-property">16.8 Exception for injunctive relief regarding intellectual property</h3>
+<p>Notwithstanding this Section 16, either party may seek <strong>injunctive or other equitable relief in a court of competent jurisdiction</strong> to prevent or stop the infringement, misappropriation, or violation of that party's intellectual property rights (including trademark, copyright, trade secret, and patent rights), pending the outcome of arbitration of any underlying damages claim.</p>
+<h3 id="169-public-injunctive-relief">16.9 Public injunctive relief</h3>
+<p>If applicable law (such as California's McGill rule) entitles you to seek public injunctive relief and such relief cannot be waived in arbitration, then your claim for public injunctive relief will proceed in a court of competent jurisdiction after the underlying individual claims are resolved in arbitration.</p>
+<h3 id="1610-30-day-opt-out">16.10 30-day opt-out</h3>
+<p>You may opt out of this Section 16 within <strong>30 days</strong> of first accepting these Terms by sending Pace a written notice of opt-out by email to <strong>legal@usepace.fit</strong> that includes your name, account email, and a clear statement that you are opting out of arbitration. If you opt out, neither you nor Pace will be required to arbitrate Disputes under this Section 16, but all other provisions of these Terms will continue to apply. Opt-out notices submitted after the 30-day period are not effective.</p>
+<h3 id="1611-survival">16.11 Survival</h3>
+<p>This Section 16 survives any termination of your account, these Terms, or your use of the Services.</p>
+<hr />
+
+</div>
+<h2 id="17-termination">17. Termination</h2>
+<p>You may stop using the Services and delete your account at any time through Pace's in-app Settings.</p>
+<p>We may suspend, restrict, or terminate your account or your access to the Services at any time, with or without notice, for any reason or no reason, including (but not limited to):</p>
+<ul>
+<li>Suspected violation of these Terms or applicable law</li>
+<li>Suspected fraud or unauthorized access</li>
+<li>Risk of harm to Pace, other users, or third parties</li>
+<li>Discontinuation of the Services or any part of them</li>
+<li>Inactivity over an extended period</li>
+</ul>
+<p>Upon termination, your right to use the Services ends immediately. The provisions of these Terms that by their nature should survive termination (including Sections 9, 10, 11, 13, 14, 15, 16, 18, 19, 20, 21, and 22) will survive.</p>
+<p>We are not liable to you or to any third party for any termination or suspension of your account or access to the Services.</p>
+<hr />
+<h2 id="18-governing-law">18. Governing law</h2>
+<p>These Terms and any Dispute arising out of or relating to these Terms or the Services are governed by and construed in accordance with the laws of the <strong>State of Minnesota</strong>, without regard to its conflict of law principles, and applicable U.S. federal law (including the Federal Arbitration Act).</p>
+<p>For any Dispute not subject to arbitration under Section 16 (or where Section 16 is held unenforceable in whole or in part), the parties consent to the exclusive jurisdiction of the state and federal courts located in <strong>Hennepin County, Minnesota</strong>, except as required by applicable consumer protection law.</p>
+<p>The United Nations Convention on Contracts for the International Sale of Goods does not apply to these Terms.</p>
+<hr />
+<h2 id="19-force-majeure">19. Force majeure</h2>
+<p>Pace will not be liable for any delay or failure to perform under these Terms to the extent caused by events outside Pace's reasonable control, including but not limited to:</p>
+<ul>
+<li>Acts of God, natural disasters, fires, floods, earthquakes</li>
+<li>War, terrorism, civil unrest, government action</li>
+<li>Labor disputes</li>
+<li>Power, internet, or telecommunications failures</li>
+<li>Failures or outages of third-party services on which the Services depend, including AI service providers (Anthropic, xAI, OpenAI, OpenRouter), infrastructure providers (Supabase, Render, Apple), and analytics providers (Sentry, PostHog)</li>
+<li>Cyberattacks, security incidents, or denial-of-service attacks not caused by Pace's negligence</li>
+<li>Pandemics, epidemics, or public health emergencies</li>
+<li>Changes in applicable law or regulation</li>
+</ul>
+<hr />
+<h2 id="20-modifications-to-the-services-and-terms">20. Modifications to the Services and Terms</h2>
+<h3 id="201-changes-to-the-services">20.1 Changes to the Services</h3>
+<p>We may modify, suspend, or discontinue the Services (or any part of them) at any time, with or without notice. We are not liable to you or to any third party for any such modification, suspension, or discontinuation.</p>
+<h3 id="202-changes-to-these-terms">20.2 Changes to these Terms</h3>
+<p>We may modify these Terms from time to time. When we make material changes (such as changes to the arbitration agreement, liability limitations, or your obligations), we will:</p>
+<ul>
+<li>Update the "Last Updated" date and increment the major version number</li>
+<li>Notify you in the app and/or by email at least 30 days before the change takes effect, where reasonably practicable</li>
+<li>Require your affirmative acceptance of the updated Terms before continued use of the Services</li>
+</ul>
+<p>For non-material changes (typo fixes, contact information updates, clarifying language), we will update the "Last Updated" date and minor version number. Your continued use of the Services after a non-material change constitutes acceptance of the updated Terms.</p>
+<p>If you do not agree to a material change, you must stop using the Services and delete your account before the change takes effect. Your continued use of the Services after a material change becomes effective constitutes acceptance of the updated Terms.</p>
+<p>Previous versions of these Terms are available upon request to legal@usepace.fit.</p>
+<hr />
+<h2 id="21-apple-specific-terms">21. Apple-specific terms</h2>
+<p>The following terms apply where you access the Services through an iOS device or the Apple App Store:</p>
+<ul>
+<li>These Terms are between you and Pace, not between you and Apple. Apple is not responsible for the Services or their content.</li>
+<li>Apple has no obligation to furnish any maintenance or support services for the Services.</li>
+<li>In the event of any failure of the Services to conform to any applicable warranty, you may notify Apple, and Apple will refund the purchase price for the Services to you (if applicable). Apple has no other warranty obligation with respect to the Services.</li>
+<li>Apple is not responsible for addressing any claims by you or any third party relating to the Services, including product liability claims, claims that the Services fail to conform to any applicable legal or regulatory requirement, and claims arising under consumer protection or similar legislation.</li>
+<li>In the event of any third-party claim that the Services or your use of the Services infringe that third party's intellectual property rights, Pace (not Apple) is solely responsible for the investigation, defense, settlement, and discharge of any such intellectual property infringement claim.</li>
+<li>You represent that you are not located in a country subject to a U.S. government embargo or designated as a "terrorist supporting" country, and that you are not on any U.S. government list of prohibited or restricted parties.</li>
+<li>Apple and Apple's subsidiaries are third-party beneficiaries of these Terms with respect to your use of the Services through Apple devices. Upon your acceptance of these Terms, Apple has the right (and is deemed to have accepted the right) to enforce these Terms against you as a third-party beneficiary.</li>
+</ul>
+<hr />
+<h2 id="22-general-provisions">22. General provisions</h2>
+<h3 id="221-entire-agreement">22.1 Entire agreement</h3>
+<p>These Terms (together with the Privacy Policy and the Consumer Health Data Privacy Policy, which are incorporated by reference) constitute the entire agreement between you and Pace with respect to the Services and supersede all prior or contemporaneous communications, agreements, and proposals (whether oral, written, or electronic) between you and Pace regarding the Services.</p>
+<h3 id="222-severability">22.2 Severability</h3>
+<p>If any provision of these Terms is held to be invalid, illegal, or unenforceable by a court or arbitrator of competent jurisdiction, that provision will be modified to the minimum extent necessary to make it valid, legal, and enforceable, or if such modification is not possible, severed from these Terms. The remaining provisions will continue in full force and effect. The class action waiver in Section 16.2 is severable as set forth in that Section.</p>
+<h3 id="223-no-waiver">22.3 No waiver</h3>
+<p>Our failure to enforce any provision of these Terms is not a waiver of that provision or of any other provision. Any waiver must be in writing and signed by an authorized representative of Pace.</p>
+<h3 id="224-assignment">22.4 Assignment</h3>
+<p>You may not assign or transfer these Terms or any of your rights or obligations under these Terms without our prior written consent. Any attempted assignment in violation of this provision is void.</p>
+<p>We may assign or transfer these Terms, in whole or in part, without your consent, including in connection with a merger, acquisition, sale of assets, or by operation of law.</p>
+<h3 id="225-notices">22.5 Notices</h3>
+<p>Notices to you may be given by email to the email address associated with your account or by posting in the Services. Notices to Pace must be sent by email to <strong>legal@usepace.fit</strong> or by mail to:</p>
+<p>Born in Tokyo Digital LLC
+ATTN: Legal
+6642 Wildflower Way
+Minnetrista, MN 55331
+USA</p>
+<p>Notices are deemed given when received (for email) or three business days after mailing (for postal mail).</p>
+<h3 id="226-relationship-of-the-parties">22.6 Relationship of the parties</h3>
+<p>These Terms do not create any agency, partnership, joint venture, employment, or franchise relationship between you and Pace.</p>
+<h3 id="227-contra-proferentem">22.7 Contra proferentem</h3>
+<p>These Terms will not be construed against Pace solely because Pace drafted them.</p>
+<h3 id="228-headings">22.8 Headings</h3>
+<p>Section headings are for convenience only and do not affect the interpretation of these Terms.</p>
+<h3 id="229-language">22.9 Language</h3>
+<p>These Terms are written in English. Any translation provided is for convenience only. In the event of any conflict between the English version and any translation, the English version controls.</p>
+<hr />
+<h2 id="23-contact-us">23. Contact us</h2>
+<p>For general questions or support: <strong>support@usepace.fit</strong></p>
+<p>For privacy-related inquiries: <strong>privacy@usepace.fit</strong></p>
+<p>For legal notices, arbitration notices, or formal legal correspondence: <strong>legal@usepace.fit</strong></p>
+<p>By mail:
+Born in Tokyo Digital LLC
+ATTN: Legal
+6642 Wildflower Way
+Minnetrista, MN 55331
+USA</p>
+<hr />
+<p><em>Born in Tokyo Digital LLC. All rights reserved.</em></p>
+  </article>
+</main>
+
+<footer class="site-footer">
+  <a href="/privacy.html">Privacy</a>
+  <a href="/health-privacy.html">Health Data</a>
+  <a href="/terms.html">Terms</a>
+  <a href="mailto:privacy@usepace.fit">privacy@usepace.fit</a>
+  <div style="margin-top: 12px;">© 2026 Born in Tokyo Digital LLC</div>
+</footer>
+
+</body>
+</html>
