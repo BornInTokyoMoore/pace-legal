@@ -1,796 +1,373 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="robots" content="index, follow">
-<title>Privacy Policy · Pace</title>
-<meta name="description" content="How Pace collects, uses, and protects your personal information.">
-<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2220%22 fill=%22%23F0A040%22/><path d=%22M20 70 L40 50 L55 60 L80 30%22 stroke=%22white%22 stroke-width=%228%22 fill=%22none%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22/></svg>">
-<style>
-* { box-sizing: border-box; }
-
-html {
-  scroll-behavior: smooth;
-  -webkit-text-size-adjust: 100%;
-}
-
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  background: #FAF8F5;
-  color: #1A1A1A;
-  line-height: 1.65;
-  font-size: 16px;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-/* Sticky header */
-.site-header {
-  position: sticky;
-  top: 0;
-  z-index: 100;
-  background: rgba(250, 248, 245, 0.92);
-  backdrop-filter: saturate(180%) blur(10px);
-  -webkit-backdrop-filter: saturate(180%) blur(10px);
-  border-bottom: 1px solid #E8E2D4;
-}
-
-.site-header-inner {
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 14px 24px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 24px;
-}
-
-.brand {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  text-decoration: none;
-  color: #1A1A1A;
-  font-weight: 600;
-  font-size: 17px;
-  letter-spacing: -0.01em;
-}
-
-.brand-mark {
-  width: 28px;
-  height: 28px;
-  border-radius: 8px;
-  background: #F0A040;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.nav {
-  display: flex;
-  gap: 8px;
-}
-
-.nav a {
-  font-size: 14px;
-  color: #5A5A5A;
-  text-decoration: none;
-  padding: 6px 12px;
-  border-radius: 8px;
-  font-weight: 500;
-  transition: all 0.15s ease;
-}
-
-.nav a:hover {
-  background: rgba(240, 160, 64, 0.1);
-  color: #1A1A1A;
-}
-
-.nav a.active {
-  background: rgba(240, 160, 64, 0.15);
-  color: #BA7517;
-}
-
-/* Layout */
-.layout {
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 32px 24px 80px;
-  display: grid;
-  grid-template-columns: 240px 1fr;
-  gap: 56px;
-}
-
-@media (max-width: 860px) {
-  .layout {
-    grid-template-columns: 1fr;
-    gap: 24px;
-    padding: 24px 20px 60px;
-  }
-}
-
-/* TOC sidebar */
-.toc {
-  position: sticky;
-  top: 80px;
-  align-self: start;
-  font-size: 13px;
-  line-height: 1.5;
-  max-height: calc(100vh - 100px);
-  overflow-y: auto;
-}
-
-.toc-title {
-  font-size: 11px;
-  font-weight: 600;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: #BA7517;
-  margin-bottom: 12px;
-}
-
-.toc ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  border-left: 1px solid #E8E2D4;
-}
-
-.toc li {
-  margin: 0;
-}
-
-.toc a {
-  display: block;
-  padding: 6px 14px;
-  color: #5A5A5A;
-  text-decoration: none;
-  border-left: 2px solid transparent;
-  margin-left: -1px;
-  transition: all 0.15s ease;
-}
-
-.toc a:hover {
-  color: #1A1A1A;
-  border-left-color: #F0A040;
-  background: rgba(240, 160, 64, 0.04);
-}
-
-@media (max-width: 860px) {
-  .toc {
-    position: static;
-    max-height: none;
-    background: white;
-    border: 1px solid #E8E2D4;
-    border-radius: 12px;
-    padding: 16px;
-  }
-  .toc ul { border-left: none; }
-  .toc a { padding: 4px 0; border-left: none; margin-left: 0; }
-}
-
-/* Main content */
-.content {
-  min-width: 0;
-  max-width: 720px;
-}
-
-.doc-header {
-  border-bottom: 1px solid #E8E2D4;
-  padding-bottom: 24px;
-  margin-bottom: 32px;
-}
-
-.doc-meta {
-  display: flex;
-  gap: 16px;
-  flex-wrap: wrap;
-  font-size: 13px;
-  color: #5A5A5A;
-  margin-top: 12px;
-}
-
-.doc-meta-item strong {
-  color: #1A1A1A;
-  font-weight: 600;
-}
-
-.version-badge {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  padding: 4px 10px;
-  background: rgba(240, 160, 64, 0.12);
-  color: #BA7517;
-  border-radius: 100px;
-  font-size: 12px;
-  font-weight: 600;
-  letter-spacing: 0.02em;
-}
-
-/* Typography */
-.content h1 {
-  font-size: 34px;
-  font-weight: 700;
-  letter-spacing: -0.02em;
-  line-height: 1.15;
-  margin: 0 0 8px;
-  color: #1A1A1A;
-}
-
-.content h2 {
-  font-size: 22px;
-  font-weight: 600;
-  letter-spacing: -0.01em;
-  line-height: 1.3;
-  margin: 48px 0 16px;
-  color: #1A1A1A;
-  scroll-margin-top: 80px;
-}
-
-.content h3 {
-  font-size: 17px;
-  font-weight: 600;
-  margin: 28px 0 12px;
-  color: #1A1A1A;
-  scroll-margin-top: 80px;
-}
-
-.content h4 {
-  font-size: 15px;
-  font-weight: 600;
-  margin: 20px 0 8px;
-  color: #1A1A1A;
-}
-
-.content p {
-  margin: 0 0 16px;
-  font-size: 16px;
-  line-height: 1.65;
-}
-
-.content a {
-  color: #BA7517;
-  text-decoration: underline;
-  text-decoration-color: rgba(186, 117, 23, 0.3);
-  text-underline-offset: 3px;
-  transition: all 0.15s ease;
-}
-
-.content a:hover {
-  text-decoration-color: #BA7517;
-}
-
-.content ul, .content ol {
-  margin: 0 0 16px;
-  padding-left: 24px;
-}
-
-.content li {
-  margin: 6px 0;
-  line-height: 1.6;
-}
-
-.content strong {
-  font-weight: 600;
-  color: #1A1A1A;
-}
-
-.content em {
-  font-style: italic;
-}
-
-.content hr {
-  border: none;
-  border-top: 1px solid #E8E2D4;
-  margin: 48px 0;
-}
-
-/* Tables */
-.content table {
-  width: 100%;
-  border-collapse: collapse;
-  margin: 20px 0;
-  font-size: 14px;
-  background: white;
-  border: 1px solid #E8E2D4;
-  border-radius: 8px;
-  overflow: hidden;
-}
-
-.content th {
-  text-align: left;
-  padding: 12px 16px;
-  background: rgba(240, 160, 64, 0.08);
-  font-weight: 600;
-  color: #1A1A1A;
-  border-bottom: 1px solid #E8E2D4;
-  font-size: 13px;
-  letter-spacing: 0.01em;
-}
-
-.content td {
-  padding: 12px 16px;
-  border-bottom: 1px solid #F0EBE0;
-  vertical-align: top;
-}
-
-.content tr:last-child td {
-  border-bottom: none;
-}
-
-/* Code */
-.content code {
-  background: rgba(240, 160, 64, 0.1);
-  color: #BA7517;
-  padding: 2px 6px;
-  border-radius: 4px;
-  font-family: "SF Mono", Menlo, Consolas, monospace;
-  font-size: 13px;
-}
-
-/* Footer */
-.site-footer {
-  border-top: 1px solid #E8E2D4;
-  padding: 32px 24px;
-  text-align: center;
-  font-size: 13px;
-  color: #5A5A5A;
-}
-
-.site-footer a {
-  color: #5A5A5A;
-  text-decoration: none;
-  margin: 0 12px;
-}
-
-.site-footer a:hover {
-  color: #BA7517;
-}
-
-/* Hide HTML comments visually */
-.content > *:first-child { margin-top: 0; }
-
-/* Print styles */
-@media print {
-  .site-header, .toc, .site-footer { display: none; }
-  .layout { grid-template-columns: 1fr; padding: 0; }
-  body { background: white; }
-  .arbitration-box { border: 2px solid #F0A040 !important; }
-}
-
-/* Section 16 (Terms of Service · Mandatory Arbitration) — conspicuous treatment
-   per AT&T Mobility v. Concepcion enforceability standards.
-   Visible boxed border, light amber background, larger heading, bold class waiver. */
-.arbitration-box {
-  margin: 56px 0 48px;
-  padding: 28px 28px 24px;
-  background: rgba(240, 160, 64, 0.05);
-  border: 2px solid #F0A040;
-  border-radius: 12px;
-  scroll-margin-top: 80px;
-}
-.arbitration-box h2 {
-  font-size: 26px !important;
-  margin-top: 0 !important;
-  margin-bottom: 8px;
-  color: #1A1A1A;
-}
-.arbitration-box .arbitration-warning {
-  font-size: 15px;
-  font-weight: 600;
-  color: #BA7517;
-  margin: 0 0 24px;
-  letter-spacing: 0.01em;
-}
-.arbitration-box h3 {
-  margin-top: 28px !important;
-}
-/* Class action waiver paragraph (16.2) — strong emphasis treatment */
-.arbitration-box .class-action-waiver {
-  display: block;
-  padding: 16px 18px;
-  background: rgba(240, 160, 64, 0.14);
-  border-left: 4px solid #F0A040;
-  border-radius: 6px;
-  margin: 12px 0;
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 1.55;
-}
-/* TOC bold + amber treatment for Section 16 link */
-.toc a[href*="16-mandatory-arbitration"] {
-  font-weight: 700;
-  color: #BA7517;
-}
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="index, follow">
+  <title>Pace Privacy Policy — Pace</title>
+  <meta name="description" content="How Pace handles your personal information.">
+  <link rel="stylesheet" href="/styles.css">
+  <link rel="canonical" href="https://usepace.fit/privacy">
 </head>
 <body>
-
-<header class="site-header">
-  <div class="site-header-inner">
-    <a href="/" class="brand">
-      <span class="brand-mark">
-        <svg width="16" height="16" viewBox="0 0 100 100" fill="none">
-          <path d="M20 70 L40 50 L55 60 L80 30" stroke="white" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
-        </svg>
-      </span>
-      Pace
-    </a>
-    <nav class="nav">
-      <a href="/privacy.html" class="active">Privacy</a>
-      <a href="/health-privacy.html" class="">Health Data</a>
-      <a href="/terms.html" class="">Terms</a>
+  <header class="site-header">
+    <a href="/" class="brand">Pace</a>
+    <nav class="site-nav">
+      <a href="/">Home</a>
+      <a href="/privacy" class="active">Privacy</a>
+      <a href="/health-privacy">Health Privacy</a>
+      <a href="/terms">Terms</a>
     </nav>
-  </div>
-</header>
-
-<main class="layout">
-  <aside class="toc" aria-label="Table of contents">
-    <div class="toc-title">On this page</div>
-    <ul>
-      <li><a href="#a-note-from-the-team">A note from the team</a></li>
-      <li><a href="#1-who-we-are">1. Who we are</a></li>
-      <li><a href="#2-about-this-policy">2. About this Policy</a></li>
-      <li><a href="#3-what-information-we-collect">3. What information we collect</a></li>
-      <li><a href="#4-how-we-collect-information">4. How we collect information</a></li>
-      <li><a href="#5-how-we-use-your-information">5. How we use your information</a></li>
-      <li><a href="#6-who-we-share-your-information-with">6. Who we share your information with</a></li>
-      <li><a href="#7-how-long-we-keep-your-information">7. How long we keep your information</a></li>
-      <li><a href="#8-how-we-keep-your-information-secure">8. How we keep your information secure</a></li>
-      <li><a href="#9-your-rights-and-choices">9. Your rights and choices</a></li>
-      <li><a href="#10-childrens-privacy">10. Children's privacy</a></li>
-      <li><a href="#11-international-users">11. International users</a></li>
-      <li><a href="#12-about-the-testflight-closed-beta">12. About the TestFlight closed beta</a></li>
-      <li><a href="#13-how-we-update-this-policy">13. How we update this Policy</a></li>
-      <li><a href="#14-how-to-contact-us">14. How to contact us</a></li>
-    </ul>
-  </aside>
-
-  <article class="content">
-    <header class="doc-header">
-      <div class="version-badge">Version 1.1</div>
-      <h1>Privacy Policy</h1>
-      <div class="doc-meta">
-        <span class="doc-meta-item"><strong>Effective:</strong> April 29, 2026</span>
-        <span class="doc-meta-item"><strong>Last updated:</strong> April 29, 2026</span>
-      </div>
-    </header>
-
-    <!-- 
-WHY THIS POLICY EXISTS:
-This is Pace's general Privacy Policy, applicable to all users of the Pace app and usepace.fit website. It is designed to comply with: (1) Apple App Store Review Guideline 5.1.1 and 5.1.2 (including 5.1.2(i) for AI third-party data sharing); (2) the California Consumer Privacy Act / California Privacy Rights Act (Cal. Civ. Code § 1798.100 et seq.); (3) general consumer protection law applicable in Minnesota; (4) industry best practice for consumer health and fitness apps. A separate Consumer Health Data Privacy Policy at usepace.fit/health-privacy supplements this Policy for Washington State residents and addresses the Washington My Health My Data Act (RCW 19.373).
-
-This is Version 1.1, drafted for the TestFlight closed-beta phase. v1.1 (April 22, 2026) revises v1.0 to address: (a) Apple 5.1.2(i) precision for AI provider disclosures including OpenRouter routing; (b) accurate description of OpenAI embedding flow; (c) category-by-category retention criteria per Cal. Civ. Code § 1798.130(a)(5)(C); (d) "de-identified" terminology per Cal. Civ. Code § 1798.140(m); (e) age threshold raised to 18+ for TestFlight beta with operational fit; (f) strengthened US-only language; (g) provider-specific training/retention representations grounded in each provider's public terms.
-
-This Policy will be reviewed and updated by retained legal counsel before public App Store launch.
--->
-
-<hr />
-<h2 id="a-note-from-the-team">A note from the team</h2>
-<p>Hi — I'm Chris, the founder of Pace. Pace is a small, independent app I built to help you bring your health data together — what you eat, how you train, how you recover, and how it all connects.</p>
-<p>Because Pace works with personal health information, I take privacy seriously. This Policy describes what data Pace collects, how it's used, who I share it with, and the rights you have over your data. I've tried to write it in plain English, with the legal precision needed where the law requires it.</p>
-<p>If you're a Washington State resident or you connect health-related data to Pace, please also read our <strong><a href="/health-privacy.html">Consumer Health Data Privacy Policy</a></strong>, which provides additional disclosures required by the Washington My Health My Data Act.</p>
-<p>If anything in this Policy is unclear, email me at <strong>privacy@usepace.fit</strong>.</p>
-<hr />
-<h2 id="1-who-we-are">1. Who we are</h2>
-<p>Pace is operated by <strong>Born in Tokyo Digital LLC</strong>, a Minnesota limited liability company.</p>
-<table>
-<thead>
-<tr>
-<th></th>
-<th></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Legal entity</td>
-<td>Born in Tokyo Digital LLC</td>
-</tr>
-<tr>
-<td>State</td>
-<td>Minnesota, USA</td>
-</tr>
-<tr>
-<td>Mailing address</td>
-<td>6642 Wildflower Way, Minnetrista, MN 55331</td>
-</tr>
-<tr>
-<td>Privacy contact</td>
-<td>privacy@usepace.fit</td>
-</tr>
-<tr>
-<td>Support contact</td>
-<td>support@usepace.fit</td>
-</tr>
-<tr>
-<td>App</td>
-<td>Pace (iOS)</td>
-</tr>
-<tr>
-<td>Website</td>
-<td>usepace.fit</td>
-</tr>
-</tbody>
-</table>
-<p>For purposes of applicable data protection laws, Born in Tokyo Digital LLC is the <strong>data controller</strong> of the personal information described in this Policy.</p>
-<hr />
-<h2 id="2-about-this-policy">2. About this Policy</h2>
-<p>This Privacy Policy ("Policy") describes how Born in Tokyo Digital LLC ("Pace," "we," "our," or "us") collects, uses, shares, and protects your personal information when you use the Pace iOS app, the usepace.fit website, and related services (together, the "Services").</p>
-<p>This Policy applies to all users of Pace, including users currently participating in the Pace TestFlight closed beta program.</p>
-<hr />
-<h2 id="3-what-information-we-collect">3. What information we collect</h2>
-<p>Pace collects the following categories of information.</p>
-<h3 id="31-information-you-provide-directly">3.1 Information you provide directly</h3>
+  </header>
+  <main class="content">
+    <h1 id="pace-privacy-policy">Pace Privacy Policy</h1>
+<p><strong>Effective date:</strong> May 3, 2026
+<strong>Last updated:</strong> May 3, 2026
+<strong>Version:</strong> 1.0
+<strong>Operator:</strong> Born in Tokyo Digital LLC, a Minnesota limited liability company</p>
+<hr>
+<h2 id="what-this-policy-is">What this policy is</h2>
+<p>This Privacy Policy describes how Pace handles personal information. Pace is operated by <strong>Born in Tokyo Digital LLC</strong> (EIN 42-2068679), a Minnesota limited liability company. We refer to ourselves below as &ldquo;Pace&rdquo; or &ldquo;we.&rdquo;</p>
+<p>This policy applies to:</p>
 <ul>
-<li><strong>Account information.</strong> When you create a Pace account using Sign in with Apple, we receive your name and email address as provided by Apple. You may also set a display name within the app.</li>
-<li><strong>Profile information.</strong> During onboarding, you may provide your age, weight, height, biological sex, activity level, dietary preferences, and fitness goals.</li>
-<li><strong>Food log entries.</strong> When you log food, we collect the food item, portion, time, and meal classification (breakfast, lunch, etc.).</li>
-<li><strong>Food photos.</strong> When you use the camera to log food, we receive the photo for the limited purpose of analyzing it for nutrition information.</li>
-<li><strong>Barcode and nutrition label photos.</strong> When you scan a barcode or photograph a nutrition label, we receive the image for analysis.</li>
-<li><strong>Coach chat messages.</strong> When you chat with the Pace coach, we receive your messages.</li>
-<li><strong>Exercise logs.</strong> When you log a workout through the coach, we receive the exercise name, sets, reps, and weight.</li>
-<li><strong>Body weight entries.</strong> When you log weight, we receive the value and the date.</li>
-<li><strong>Feedback and support requests.</strong> When you contact us, we receive what you send.</li>
+<li>The Pace iOS app</li>
+<li>The Pace backend services that the app communicates with</li>
+<li>The website at usepace.fit</li>
+<li>Any communications you have with us</li>
 </ul>
-<h3 id="32-information-we-collect-from-your-device">3.2 Information we collect from your device</h3>
+<p>This policy does <strong>not</strong> replace our <strong>Consumer Health Data Privacy Policy</strong> at <a href="https://usepace.fit/health-privacy">https://usepace.fit/health-privacy</a>. That separate document describes how we handle consumer health data of Washington State residents and consumers whose consumer health data is collected in Washington, as required by the Washington My Health My Data Act. If you are a Washington consumer, that policy controls your consumer health data; this policy continues to apply to your other personal information.</p>
+<p>We are a small startup, not a large company. Several sections of this policy refer to that fact honestly, because the alternative — making promises we can&rsquo;t keep — is worse for you and worse for us.</p>
+<blockquote>
+<p><strong>Quick summary of the most important commitments in this policy:</strong></p>
 <ul>
-<li><strong>Apple HealthKit data</strong> (only with your explicit authorization through iOS). When you authorize Pace to read HealthKit data, we receive: workout records, step counts, heart rate, heart rate variability, sleep records, body weight, and other health metrics you've authorized. <strong>You control which data types are shared through iOS Settings → Privacy &amp; Security → Health.</strong> You can revoke access at any time.</li>
-<li><strong>Device information.</strong> Device model, iOS version, language, and time zone.</li>
-<li><strong>Diagnostic information.</strong> Crash reports and performance data automatically collected through the Sentry SDK to help us identify and fix technical issues. We have configured Sentry to scrub personally identifiable information from crash reports before transmission.</li>
-<li><strong>Usage information.</strong> De-identified interaction events automatically collected through the PostHog SDK to help us understand how Pace is used. Events do not include the content of your food logs, photos, or coach messages.</li>
+<li><strong>We do not sell your personal information.</strong> Not for money, not for any other valuable consideration.</li>
+<li><strong>We do not share your personal information for cross-context behavioral advertising.</strong></li>
+<li><strong>We do not use your personal information for targeted advertising.</strong></li>
+<li><strong>We do not use your personal information to train AI models.</strong></li>
+<li><strong>We do not implement geofencing.</strong></li>
+<li><strong>We are not a HIPAA-covered entity</strong> and do not display HIPAA-related seals or claim HIPAA compliance.</li>
 </ul>
-<h3 id="33-information-we-receive-from-apple">3.3 Information we receive from Apple</h3>
+<p>The full policy below explains the details, your rights, and exactly which third parties receive what data and why.</p>
+</blockquote>
+<hr>
+<h2 id="section-1">1. Scope</h2>
+<p>This policy applies to personal information we collect about you when you use Pace or interact with us. &ldquo;Personal information&rdquo; in this policy means any information that is linked or reasonably linkable to you. We use the term broadly — different state laws use slightly different terms (&ldquo;personal data,&rdquo; &ldquo;personally identifiable information,&rdquo; &ldquo;personal information&rdquo;), but in this policy we treat them all the same.</p>
+<p><strong>Geographic scope.</strong> Pace is operated from the United States. The Pace app is distributed through the Apple App Store and is generally available in App Store regions, but Pace markets and supports the app in US English only. If you access Pace from outside the United States, your information will be processed in the United States, where data protection laws may differ from those in your country. By using Pace, you understand and agree to that processing.</p>
+<p><strong>Relationship to the Consumer Health Data Privacy Policy.</strong> Our Consumer Health Data Privacy Policy at <a href="https://usepace.fit/health-privacy">https://usepace.fit/health-privacy</a> covers consumer health data of Washington State residents and consumers whose consumer health data is collected in Washington, as required by the Washington My Health My Data Act (RCW 19.373). Where that policy and this one address the same data, the more protective treatment applies; where they address different data, each governs its scope.</p>
+<hr>
+<h2 id="section-2">2. Personal information we collect</h2>
+<h3 id="section-2-1">2.1 Information you provide directly to Pace</h3>
+<p>When you create an account and use Pace, we collect:</p>
 <ul>
-<li><strong>Authentication tokens</strong> through Sign in with Apple, used to log you into Pace.</li>
-<li><strong>Subscription status</strong> (post-launch) through Apple's App Store, indicating whether your subscription is active. We do not receive your payment card information.</li>
+<li><strong>Profile information you provide at onboarding:</strong> display name (free text), email address (provided through Sign in with Apple, which may be Apple&rsquo;s relay address), age in whole years (we do not collect your date of birth), self-reported weight and height, biological sex, activity level, dietary preferences and restrictions, food allergies, fitness goals, calculated daily macro targets derived from this information, step goal preference, sleep target preference.</li>
+<li><strong>Food and meal logs:</strong> food entries, food photos you submit, photographs of nutrition labels you submit, scanned barcodes, free-text food searches, saved meals you create.</li>
+<li><strong>Coaching conversation content:</strong> every message you send to the Pace coach and every coach response.</li>
+<li><strong>Exercise records:</strong> workout entries you log through the coach (exercise name, sets, reps, weight, weight unit, RPE, duration, distance, notes).</li>
+<li><strong>Account and feature preferences:</strong> notification preferences, units of measurement, app theme.</li>
+<li><strong>Consent and acknowledgment records:</strong> the consent state recorded by the consent screen described in our Consumer Health Data Privacy Policy.</li>
 </ul>
-<h3 id="34-information-we-do-not-collect">3.4 Information we do NOT collect</h3>
-<p>For clarity: Pace does not collect, and has no access to, the contents of your iOS Photos library other than photos you specifically select and share with Pace. We do not access your contacts, your microphone, your camera roll, your location, your messages, your browsing history, or any other personal information beyond what's listed in Section 3.1, 3.2, and 3.3.</p>
-<hr />
-<h2 id="4-how-we-collect-information">4. How we collect information</h2>
-<p>We collect information through:</p>
+<h3 id="section-2-2">2.2 Information from your iOS device, with your authorization</h3>
+<p>Apple HealthKit data flows to Pace only when you grant permission through iOS system controls. The categories that Pace requests are listed in the iOS health permission prompts and described in detail in our Consumer Health Data Privacy Policy. They include: step count, active energy burned, heart rate, heart rate variability, resting heart rate, sleep stages, body weight, workouts (and route GPS only if you separately permit it), VO₂ max, and cardio recovery. You can change or revoke any HealthKit permission at any time in iOS Settings → Privacy &amp; Security → Health.</p>
+<h3 id="section-2-3">2.3 Information collected automatically</h3>
+<p>When you use Pace, we and our infrastructure providers automatically receive:</p>
 <ul>
-<li><strong>Direct submission</strong> when you create an account, complete onboarding, log food, take photos, chat with the coach, or contact us.</li>
-<li><strong>iOS HealthKit</strong> with your explicit authorization, granted through iOS system permissions.</li>
-<li><strong>Automatic collection</strong> through SDKs integrated into the app (Sentry for diagnostics, PostHog for analytics, Apple's authentication services).</li>
-<li><strong>Third-party authentication</strong> through Sign in with Apple.</li>
+<li><strong>Device and request metadata:</strong> device timezone (IANA), UTC offset, app version, iOS version, iOS device model.</li>
+<li><strong>IP address:</strong> logged by our hosting provider (Render Services, Inc.) for security, abuse-prevention, and debugging. IP addresses rotate with normal log retention.</li>
+<li><strong>Crash reports:</strong> generated by Sentry when the app crashes, with personally identifying information scrubbed before transmission.</li>
+<li><strong>Anonymous app-usage events:</strong> generated by PostHog (which feature was opened, which button was pressed). These events do not include health data and do not include your name, email, or other directly identifying information.</li>
 </ul>
-<hr />
-<h2 id="5-how-we-use-your-information">5. How we use your information</h2>
-<p>We use your information for the following purposes.</p>
-<h3 id="51-to-provide-the-services">5.1 To provide the Services</h3>
+<h3 id="section-2-4">2.4 Information from Apple&rsquo;s subscription system</h3>
+<p>When you start a subscription, Apple&rsquo;s in-app purchase system processes the transaction. The Pace app forwards your subscription receipt to RevenueCat, which validates it with Apple and makes your subscription state available to Pace. Through this flow, RevenueCat receives the validated subscription receipt, the Pace internal user ID associated with the purchase, and a record of subscription transactions over time. Pace does not see your Apple ID password, your payment card, or your billing address — Apple processes those directly.</p>
+<h3 id="section-2-5">2.5 What we do not collect</h3>
+<p>For clarity, we do <strong>not</strong> collect: precise geolocation outside what HealthKit provides for workouts you&rsquo;ve authorized; web browsing history; contacts; calendar entries; microphone recordings; <strong>biometric identifiers used for identification of a specific individual</strong> (such as fingerprints or face scans); genetic data; ad-network tracking identifiers; the iOS Advertising Identifier (IDFA); social-graph data; or any data category not listed in Sections 2.1 through 2.4.</p>
+<p>For clarity, certain biometric <em>measurements</em> — heart rate, heart rate variability, and similar — are collected from HealthKit when you authorize that flow, as described in Section 2.2 and in detail in our Consumer Health Data Privacy Policy. These are not biometric identifiers in the sense of being used to identify you; you are already authenticated by Sign in with Apple. They are, however, consumer health data subject to the protections described in our Consumer Health Data Privacy Policy.</p>
+<hr>
+<h2 id="section-3">3. How we use personal information</h2>
+<p>We use personal information for these purposes, and no others:</p>
 <ul>
-<li>Create and maintain your account</li>
-<li>Display your nutrition, activity, and recovery data in the app</li>
-<li>Enable the Pace coach to provide personalized guidance based on your data</li>
-<li>Process food photos, barcodes, and nutrition labels through AI analysis to identify nutrition information</li>
-<li>Sync data across your devices</li>
+<li><strong>To operate the Services.</strong> Display your nutrition, activity, and recovery information; generate coach responses; identify food in photos and on labels; track your progress over time; sync your data across your iOS devices; provide search.</li>
+<li><strong>To authenticate you and protect your account.</strong> Verify your identity via Sign in with Apple; detect and prevent abuse and fraud.</li>
+<li><strong>To handle subscriptions and billing.</strong> Manage your trial, paid subscription, and any refunds. Apple processes payments; we receive subscription state from Apple via RevenueCat.</li>
+<li><strong>To diagnose technical problems.</strong> Analyze crash reports to find and fix bugs.</li>
+<li><strong>To understand product use at the aggregate level.</strong> Anonymous usage events tell us which features are used and how often. We use this to make decisions about what to build and what to fix. These events do not include health data or directly identifying information.</li>
+<li><strong>To improve the Services.</strong> Where we use your information to improve Pace beyond bug-fixing — for example, evaluating the quality of food-photo identification — we use de-identified data (within the meaning of California Civil Code § 1798.140(m)) wherever doing so is reasonably possible.</li>
+<li><strong>To communicate with you about your account.</strong> Respond to your support emails. Send transactional notifications about your account or your data.</li>
+<li><strong>To comply with law.</strong> Respond to lawful regulatory or law enforcement requests, defend our legal rights, and meet legal obligations.</li>
 </ul>
-<h3 id="52-to-improve-the-services">5.2 To improve the Services</h3>
-<ul>
-<li>Diagnose technical issues using crash reports</li>
-<li>Understand product usage patterns through de-identified analytics</li>
-<li>Test and improve features</li>
-</ul>
-<h3 id="53-to-communicate-with-you">5.3 To communicate with you</h3>
-<ul>
-<li>Send transactional emails (account confirmations, password resets, billing receipts when applicable)</li>
-<li>Respond to support requests</li>
-<li>Notify you of material changes to this Policy or our Terms of Service</li>
-</ul>
-<h3 id="54-to-comply-with-legal-obligations">5.4 To comply with legal obligations</h3>
-<ul>
-<li>Respond to lawful requests from regulators or law enforcement</li>
-<li>Defend against legal claims</li>
-<li>Comply with Apple App Store Review Guidelines and applicable laws</li>
-</ul>
-<h3 id="55-what-we-do-not-do-with-your-information">5.5 What we do NOT do with your information</h3>
-<p><strong>Pace does not sell your personal information or consumer health data, and does not share personal information for cross-context behavioral advertising.</strong> We do not run advertisements in the Pace app. We do not provide your data to data brokers.</p>
-<p>Limited analytics and diagnostic data flows to our service providers (Sentry, PostHog) may be considered "sharing" under California law unless treated as service-provider/contractor processing. We treat these flows as service-provider/contractor processing and contractually restrict these providers from using the data for any purpose other than providing services to Pace.</p>
-<p>We do not use your personal information for any purpose other than those listed in Section 5.1 through 5.4.</p>
-<hr />
-<h2 id="6-who-we-share-your-information-with">6. Who we share your information with</h2>
-<p>Pace shares specific data with specific third parties for specific purposes. We name each third party explicitly so you can review their own privacy practices.</p>
-<h3 id="61-ai-service-providers">6.1 AI service providers</h3>
-<p>Pace uses artificial intelligence services to analyze food photos, process nutrition labels, generate coach responses, and remember context across conversations. The AI service providers we use are:</p>
+<p>We do <strong>not</strong>:
+- Sell your personal information to anyone.
+- Share your personal information for cross-context behavioral advertising.
+- Use your personal information for targeted advertising.
+- Use your personal information for profiling that produces legal or similarly significant effects (decisions about credit, employment, housing, insurance, education enrollment, healthcare services, or access to essential goods or services).
+- Use your personal information to train AI models — we use commercial AI APIs from providers who, under their applicable commercial terms, do not use customer API content to train their models by default.</p>
+<hr>
+<h2 id="section-4">4. How we share personal information</h2>
+<p>We share the minimum information each recipient needs to perform a specific function, and only with the recipients named below.</p>
+<h3 id="section-4-1">4.1 AI service providers (covered in detail in the Consumer Health Data Privacy Policy)</h3>
+<p>For consumer health data flows to Anthropic, xAI, OpenRouter, and OpenAI, our Consumer Health Data Privacy Policy at <a href="https://usepace.fit/health-privacy">https://usepace.fit/health-privacy</a> describes what we send to whom and why. The same flows are governed by this policy where they involve information that is not consumer health data, with the same disclosures and the same processor commitments.</p>
+<h3 id="section-4-2">4.2 Infrastructure providers</h3>
+<div class="table-wrapper">
 <table>
 <thead>
 <tr>
 <th>Provider</th>
-<th>What we send</th>
+<th>What is shared</th>
 <th>Purpose</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><strong>Anthropic, PBC</strong> (anthropic.com)</td>
-<td>Coach chat messages, nutrition label images, profile context</td>
-<td>Claude AI generates coach responses and reads nutrition labels</td>
+<td><strong>Apple, Inc.</strong></td>
+<td>Sign in with Apple identifier; HealthKit permission scopes (data flows on-device through Apple&rsquo;s permission framework); App Store in-app purchase transaction identifiers</td>
+<td>Authentication, on-device HealthKit boundary, subscription billing</td>
 </tr>
 <tr>
-<td><strong>xAI Corp.</strong> (x.ai)</td>
-<td>Food photos</td>
-<td>Grok Vision identifies food items in your photos</td>
+<td><strong>Supabase, Inc.</strong></td>
+<td>All persistent personal information described in Section 2</td>
+<td>Database hosting on US-located PostgreSQL with row-level security; authentication; file storage</td>
 </tr>
 <tr>
-<td><strong>OpenAI, L.L.C.</strong> (openai.com)</td>
-<td>Selected text snippets from your Coach conversations and stored memory summaries</td>
-<td>OpenAI generates numerical text embeddings, which Pace uses for retrieval of relevant context across Coach conversations</td>
+<td><strong>Render Services, Inc.</strong></td>
+<td>Personal information transits through Pace&rsquo;s backend during request processing; persistent storage is not on Render</td>
+<td>Backend application hosting</td>
 </tr>
 <tr>
-<td><strong>OpenRouter, Inc.</strong> (openrouter.ai)</td>
-<td>Where used as a routing layer, OpenRouter receives the same request content being transmitted to the underlying provider</td>
-<td>Routes AI requests to the disclosed provider. For Pace's current AI features, OpenRouter routes only to the providers expressly identified in this Section and not to any other provider without updated disclosure and consent</td>
+<td><strong>RevenueCat, Inc.</strong></td>
+<td>Validated Apple subscription receipts, Pace internal user ID, subscription transaction history; no health data</td>
+<td>Subscription state management</td>
+</tr>
+<tr>
+<td><strong>PostHog, Inc.</strong></td>
+<td>Anonymous app-usage events; no health data; no directly identifying information</td>
+<td>Product analytics</td>
+</tr>
+<tr>
+<td><strong>Functional Software, Inc. (Sentry)</strong></td>
+<td>App crash reports with personally identifying information scrubbed before transmission</td>
+<td>Crash diagnostics</td>
 </tr>
 </tbody>
 </table>
-<p><strong>Feature-to-provider mapping for clarity:</strong></p>
+</div>
+<p>We have written agreements with each of these providers that limit their use of the personal information to the purpose for which we engage them.</p>
+<h3 id="section-4-3">4.3 HealthKit data flows — disclosure required by Apple</h3>
+<p>When you authorize Pace to read HealthKit data through iOS, Pace uses that data on-device and on Pace&rsquo;s backend for the purposes described in Section 3.</p>
+<p><strong>What we transmit to Anthropic, PBC.</strong> As part of providing AI-driven coaching responses, Pace transmits to Anthropic processed contextual summaries derived from your HealthKit data — for example, recent sleep summaries (typical hours and stage breakdown for the past several days), recent activity summaries (steps and active calories trends), and recent recovery markers (such as resting heart rate range and HRV range) relevant to the question you have asked the coach. <strong>We do not transmit raw, full-history HealthKit exports.</strong> Transmission occurs in response to your active interaction with the coach, not passively or in the background.</p>
+<p><strong>What we never do with HealthKit data.</strong> We do not use HealthKit data for: advertising, marketing, profiling for any purpose unrelated to providing the Services to you, training AI models (ours or third parties&rsquo;), sale, sharing for cross-context behavioral advertising, or any purpose other than the AI processing described in this Section. We do not transmit HealthKit data to any third party other than the processors identified in Section 4.1 and our Consumer Health Data Privacy Policy.</p>
+<p><strong>Why this complies with Apple&rsquo;s HealthKit terms.</strong> Apple&rsquo;s App Review Guideline 5.1.3 permits the use of HealthKit data to &ldquo;[improve] health, medical, and fitness management.&rdquo; Pace&rsquo;s transmission of HealthKit-derived context to Anthropic is for exactly that purpose: enabling the Pace coach to give you personalized, informed coaching responses about your training, recovery, and nutrition. Anthropic operates as Pace&rsquo;s processor under a written agreement; Anthropic&rsquo;s commercial API terms state that customer API content is not used to train Anthropic&rsquo;s models by default, and Pace does not opt in to model training.</p>
+<p><strong>Your affirmative consent.</strong> Your acceptance of Pace&rsquo;s consent screen during onboarding — including the AI-sharing acknowledgment — constitutes your affirmative consent to Pace&rsquo;s sharing of HealthKit-derived context with the AI service providers described in this policy and in our Consumer Health Data Privacy Policy. You may revoke specific HealthKit permissions at any time in iOS Settings → Privacy &amp; Security → Health.</p>
+<h3 id="section-4-4">4.4 Other recipients</h3>
 <ul>
-<li>Food-photo analysis requests are sent to <strong>xAI Corp.</strong> Where these requests pass through <strong>OpenRouter, Inc.</strong>, OpenRouter acts only as the routing layer to xAI as the disclosed provider.</li>
-<li>Coach response generation requests are sent to <strong>Anthropic, PBC</strong>.</li>
-<li>Embedding generation requests are sent to <strong>OpenAI, L.L.C.</strong></li>
+<li><strong>With your specific consent</strong>, we may share your personal information with another service you affirmatively authorize.</li>
+<li><strong>Legal compliance:</strong> to regulators or law enforcement in response to a lawful request, or as necessary to defend our legal rights.</li>
+<li><strong>Business transactions:</strong> to an acquiring party in a sale of Pace or a merger involving Born in Tokyo Digital LLC, in which case the recipient must continue to honor this policy or obtain new consent.</li>
 </ul>
-<p>Pace will not send AI-feature data to any provider not identified above without first updating this Policy and obtaining required consent.</p>
-<p><strong>About AI provider data handling:</strong> Pace contractually restricts these providers to processing your data on Pace's instructions to provide the Services. For API and business offerings, Anthropic, xAI, and OpenAI publicly state that they do not use customer API or business data to train their models by default or without explicit permission. Some providers may retain request or response data for limited abuse-prevention, security, logging, or legal-compliance periods under their applicable terms. Where available, Pace configures provider settings to minimize retention and restrict routing.</p>
-<h3 id="62-infrastructure-providers">6.2 Infrastructure providers</h3>
+<h3 id="section-4-5">4.5 We do not sell or share your personal information</h3>
+<p>We do not sell your personal information for monetary or other valuable consideration. We do not share your personal information for cross-context behavioral advertising. The CCPA, the Virginia CDPA, and similar laws use &ldquo;sell&rdquo; and &ldquo;share&rdquo; in technical ways that include some non-monetary exchanges; we do neither under any of these definitions.</p>
+<h3 id="section-4-6">4.6 Pace has no affiliates</h3>
+<p>Born in Tokyo Digital LLC has no parent, no subsidiary, and no other corporate affiliate. We share no personal information with affiliates because we have none.</p>
+<hr>
+<h2 id="section-5">5. Cookies, tracking technologies, and analytics</h2>
+<p>The Pace app is an iOS app, not a website. The app does not use traditional web browser cookies. The app does use software development kits (SDKs) for analytics and crash reporting:</p>
+<ul>
+<li><strong>PostHog</strong> records anonymous app-usage events (which screens are opened, which buttons are pressed) tied to a randomly generated identifier. We do not associate these events with your name, email, or health data.</li>
+<li><strong>Sentry</strong> records app crashes with personally identifying information scrubbed before transmission, so we can find and fix bugs.</li>
+</ul>
+<p>The Pace app does <strong>not</strong> use:
+- The iOS Advertising Identifier (IDFA)
+- App Tracking Transparency (ATT) — Pace does not perform cross-app or cross-website tracking
+- Tracking pixels of any kind
+- Advertising networks
+- Marketing attribution SDKs
+- Session-recording or behavior-replay tools</p>
+<p>If you visit our website at usepace.fit, the website is currently a static informational site and does not set marketing or analytics cookies. If we add web analytics later, we will update this policy.</p>
+<hr>
+<h2 id="section-6">6. Data retention</h2>
+<p>We retain personal information only as long as we need it for the purposes described in this policy, and we apply the following retention criteria:</p>
+<div class="table-wrapper">
 <table>
 <thead>
 <tr>
-<th>Provider</th>
-<th>Role</th>
+<th>Category</th>
+<th>Retention</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><strong>Supabase</strong> (supabase.com)</td>
-<td>Database hosting, authentication infrastructure, file storage. All your data is stored in a Supabase project we control.</td>
+<td>Account profile, food logs, exercise logs, coaching messages, HealthKit snapshots, embeddings, saved meals</td>
+<td>Until you delete the data through the app or delete your account</td>
 </tr>
 <tr>
-<td><strong>Render</strong> (render.com)</td>
-<td>Backend application hosting. Your requests pass through Render servers but are not stored there.</td>
+<td>Consent records (for legal evidence of consent)</td>
+<td>Until you delete your account, then for the period required to defend against legal claims; backup deletion within the ordinary backup cycle</td>
 </tr>
 <tr>
-<td><strong>Apple</strong></td>
-<td>Authentication (Sign in with Apple), app distribution (App Store), in-app purchases (StoreKit).</td>
+<td>Subscription records</td>
+<td>As required to administer your subscription and meet tax and accounting obligations</td>
+</tr>
+<tr>
+<td>Crash reports (Sentry)</td>
+<td>Per Sentry&rsquo;s standard retention; PII scrubbed before transmission</td>
+</tr>
+<tr>
+<td>Anonymous usage events (PostHog)</td>
+<td>Per PostHog&rsquo;s standard retention; not linked to identifying information</td>
+</tr>
+<tr>
+<td>Server access logs (Render)</td>
+<td>Standard log rotation by Render; not stored persistently by Pace</td>
 </tr>
 </tbody>
 </table>
-<h3 id="63-analytics-and-operations-providers">6.3 Analytics and operations providers</h3>
-<table>
-<thead>
-<tr>
-<th>Provider</th>
-<th>What they receive</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><strong>Sentry</strong> (sentry.io)</td>
-<td>Crash reports and error logs, with personally identifiable information scrubbed</td>
-</tr>
-<tr>
-<td><strong>PostHog</strong> (posthog.com)</td>
-<td>De-identified usage events (e.g., "user opened dashboard," "user logged food")</td>
-</tr>
-<tr>
-<td><strong>RevenueCat</strong> (revenuecat.com) — post-public-launch</td>
-<td>Subscription status and entitlement</td>
-</tr>
-</tbody>
-</table>
-<h3 id="64-other-categories-of-recipients">6.4 Other categories of recipients</h3>
-<p>We may also share information:</p>
+</div>
+<p>When you delete your Pace account, we delete your account, your profile, your food logs, your exercise logs, your coaching messages, your stored embeddings, and your HealthKit snapshots from our active production database systems. We initiate provider deletion requests where the provider&rsquo;s contract supports it. We delete or overwrite archived and backup copies in the ordinary backup cycle, in any case within the period required by applicable state law (for Washington consumer health data, see our Consumer Health Data Privacy Policy).</p>
+<p>We may retain a minimal record that an account previously existed (a hashed identifier with no underlying personal information) for fraud prevention.</p>
+<hr>
+<h2 id="section-7">7. Security</h2>
+<p>We use the following security measures:</p>
 <ul>
-<li><strong>With your consent</strong>, to other services you authorize (e.g., if you connect Pace to a third-party app in the future).</li>
-<li><strong>To comply with law</strong>, in response to lawful requests from regulators or law enforcement, or to defend our legal rights.</li>
-<li><strong>In connection with a business transaction</strong>, such as a sale of Pace or its assets, in which case the recipient must honor this Policy.</li>
+<li>TLS encryption for all data in transit between the Pace app, our backend, and our processors</li>
+<li>Encryption at rest in our Supabase database</li>
+<li>PostgreSQL row-level security policies that restrict your data to your account and authorized Pace systems</li>
+<li>Sign in with Apple — Pace never sees or stores your Apple ID password</li>
+<li>Personal information stored in iOS Keychain, not iOS UserDefaults, where Keychain is appropriate</li>
+<li>Written agreements with each processor that bind them to use the information only as we instruct</li>
+<li>No tracking pixels, no advertising SDKs, no cross-context behavioral advertising tooling</li>
 </ul>
-<p>We do not share your information for any other purpose without your explicit consent.</p>
-<hr />
-<h2 id="7-how-long-we-keep-your-information">7. How long we keep your information</h2>
-<p>We retain personal information by category, applying the following criteria:</p>
+<p>We honestly disclose what we are not:</p>
 <ul>
-<li><strong>Account profile and core health and wellness records</strong> (your account information, profile data, food logs, coach conversations, exercise logs, and HealthKit data Pace has stored): retained while your account remains active and for a limited period thereafter as reasonably necessary to complete deletion workflows, resolve disputes, maintain security records, or comply with legal obligations.</li>
-<li><strong>Crash and diagnostic logs</strong> (Sentry): retained for the shorter of the period needed for debugging and security or the vendor's standard log retention period, unless longer retention is legally required.</li>
-<li><strong>De-identified usage events</strong> (PostHog): retained on the vendor's standard analytics retention schedule and not linked to your personal identity.</li>
-<li><strong>Submitted photos not saved to meal history</strong> (food photos that you do not save as a logged meal): retained only for the time reasonably necessary to complete processing and confirm result delivery.</li>
-<li><strong>Backups and archives</strong>: retained on rolling schedules and deleted or overwritten in the ordinary backup cycle, subject to legal holds or security needs. For Washington consumer health data, backup deletion will not exceed the period permitted under RCW 19.373.040.</li>
-<li><strong>Billing and tax records</strong> (post-launch, when applicable): retained as required by applicable tax and accounting law.</li>
-<li><strong>De-identified, aggregated data</strong> that cannot reasonably be linked back to you may be retained indefinitely.</li>
+<li>We are a small startup and do not currently hold SOC 2, ISO 27001, or any other independent security certification, and we do not claim to.</li>
+<li>We are not a HIPAA-covered entity or business associate. We do not display HIPAA-related seals.</li>
+<li>No system is perfectly secure. We commit to improving our security posture over time and to telling you the truth about what we have implemented.</li>
 </ul>
-<p>When you delete your account, your data is removed from our active systems immediately, your Sign in with Apple token is revoked, and backups are deleted in the ordinary backup cycle.</p>
-<hr />
-<h2 id="8-how-we-keep-your-information-secure">8. How we keep your information secure</h2>
-<p>We use technical and organizational safeguards to protect your information, including:</p>
+<hr>
+<h2 id="section-8">8. Your universal rights</h2>
+<p>The rights in this section are available to all Pace users to the extent we can operationally provide them. Section 9 below describes additional rights available under specific state laws.</p>
+<h3 id="section-8-1">8.1 Right to know what we collect and why</h3>
+<p>You have the right to know what categories of personal information we have collected, the sources, the purposes, and the categories of recipients. Section 2, Section 3, and Section 4 of this policy answer those questions for all users. If you want a more specific explanation, contact us at legal@usepace.fit.</p>
+<h3 id="section-8-2">8.2 Right to access</h3>
+<p>You have the right to obtain a copy of your personal information that we hold. To exercise this right, email legal@usepace.fit. We will provide your data in a portable format within 45 days of receiving a verified request. Where the request is complex, we may extend our response by an additional 45 days, with notice to you.</p>
+<h3 id="section-8-3">8.3 Right to correct</h3>
+<p>You can correct most of your personal information directly in the Pace app — your profile, your goals, your logs. For information you cannot edit in-app, email legal@usepace.fit.</p>
+<h3 id="section-8-4">8.4 Right to delete</h3>
+<p>You can delete your Pace account at any time through the in-app Settings, which initiates the deletion described in Section 6. You can also request deletion by emailing legal@usepace.fit. Once we receive a verified deletion request, we will complete deletion within 45 days, with the same backup-cycle treatment described in Section 6.</p>
+<h3 id="section-8-5">8.5 Right to data portability</h3>
+<p>Where applicable law requires, we will provide your data in a portable, machine-readable format. Email legal@usepace.fit to request portability.</p>
+<h3 id="section-8-6">8.6 Right to opt out of sale, sharing, targeted advertising, and significant-effect profiling</h3>
+<p>You have the right under various state privacy laws to opt out of (a) the sale of your personal information, (b) sharing of your personal information for cross-context behavioral advertising, (c) targeted advertising, and (d) profiling that produces legal or similarly significant effects.</p>
+<p>Pace does not engage in any of these activities (see Section 4.5 and the use limitations in Section 3). Because Pace does not engage in these activities, there is no opt-out mechanism for you to exercise — these activities do not occur in the first place. If we ever change our practices, we will update this policy, provide a clear opt-out mechanism before the change takes effect, and obtain affirmative consent before the change applies to your existing data.</p>
+<h3 id="section-8-7">8.7 Right to non-discrimination</h3>
+<p>We will not deny you services, charge you a different price, or provide you a different level of service for exercising any privacy right.</p>
+<h3 id="section-8-8">8.8 Right to withdraw consent</h3>
+<p>For processing based on your consent (including consumer health data — see our Consumer Health Data Privacy Policy), you may withdraw your consent at any time. Withdrawal does not affect the lawfulness of processing before withdrawal, and it may limit your ability to use Pace because some processing is necessary to provide the Services.</p>
+<h3 id="section-8-9">8.9 Right to appeal</h3>
+<p>If we deny any of the rights requests above, you have the right to appeal. Email legal@usepace.fit with the subject line &ldquo;Appeal&rdquo; and a reference to our original decision. We will respond to your appeal within 45 days of receipt and explain our reasoning. If we deny your appeal, we will tell you how to contact your state Attorney General to file a complaint.</p>
+<h3 id="section-8-10">8.10 How we verify your identity</h3>
+<p>To protect against fraudulent rights requests, we may need to verify that the request comes from you or your authorized representative. Where reasonable, verification is by authentication through your existing Pace account. We will not require you to create a new account to exercise your rights, and we will tell you what additional information we need if your request cannot be verified.</p>
+<h3 id="section-8-11">8.11 No charge</h3>
+<p>We will not charge you to exercise these rights, except where applicable law permits us to charge for excessive or repetitive requests.</p>
+<hr>
+<h2 id="section-9">9. State-specific privacy notices</h2>
+<p>This section describes additional rights and disclosures for residents of states with comprehensive privacy laws. The state-specific rights below supplement (and do not limit) the universal rights in Section 8.</p>
+<h3 id="section-9-1">9.1 California</h3>
+<p>If you are a California resident, the California Consumer Privacy Act, as amended by the California Privacy Rights Act (&ldquo;CCPA&rdquo;), gives you the rights below. Currently Pace&rsquo;s processing volume and revenue are below the CCPA&rsquo;s applicability thresholds (Cal. Civ. Code § 1798.140(d)). We honor these rights anyway as a matter of operational policy, and we will be required to honor them once Pace meets the thresholds.</p>
+<p><strong>Categories of personal information collected, sold, and shared.</strong> Sections 2 and 4 of this policy describe the categories collected and the categories of recipients. We do not sell personal information and do not share it for cross-context behavioral advertising.</p>
+<p><strong>Sensitive personal information.</strong> Cal. Civ. Code § 1798.140(ae) defines sensitive personal information to include health information. Pace collects sensitive personal information (specifically, health-related information). We use it only for the purposes described in Section 3 — operating the Services, providing AI coaching, and the other purposes described — and not for any purpose to which California&rsquo;s right to limit use of sensitive personal information would attach.</p>
+<p><strong>California-specific consumer rights.</strong> Right to know, right to delete, right to correct, right to know about sale/sharing (we don&rsquo;t sell or share for behavioral advertising — see Section 4.5), right to opt out of sale/sharing (see Section 8.6), right to limit use of sensitive personal information (not applicable because we do not use sensitive personal information for any purpose beyond providing the Service), right to non-discrimination, right to data portability. To exercise: email legal@usepace.fit.</p>
+<p><strong>Authorized agent.</strong> You may designate an authorized agent to make a request on your behalf. We may require the agent to provide proof of authorization and require you to verify your identity.</p>
+<p><strong>Shine the Light (Cal. Civ. Code § 1798.83).</strong> California residents may request a notice describing categories of personal information shared with third parties for those third parties&rsquo; direct marketing purposes. Pace does not share personal information with third parties for those parties&rsquo; direct marketing purposes.</p>
+<p><strong>Automated decision-making (CCPA ADMT regulations effective January 1, 2026).</strong> The CCPA&rsquo;s automated decision-making technology regulations apply to &ldquo;significant decisions&rdquo; about consumers — such as the provision or denial of financial services, lending, housing, insurance, education enrollment, employment opportunities, healthcare services, or access to essential goods or services. Pace&rsquo;s AI coach provides general wellness guidance. It does not make significant decisions of any of those types. The Pace coach is not a healthcare provider and does not determine your access to healthcare services. If you have questions about how the coach generates a particular response, email legal@usepace.fit.</p>
+<h3 id="section-9-2">9.2 Colorado</h3>
+<p>If you are a Colorado resident, the Colorado Privacy Act gives you rights to access, correct, delete, data portability, opt-out of sale, opt-out of targeted advertising, opt-out of profiling for decisions producing legal or significant effects, and to revoke consent. Colorado requires controllers to honor universal opt-out signals. Pace does not engage in sales, targeted advertising, or significant-effect profiling — see Section 8.6 for the consequence of that fact for your opt-out rights. For other rights, email legal@usepace.fit.</p>
+<h3 id="section-9-3">9.3 Connecticut</h3>
+<p>If you are a Connecticut resident, the Connecticut Data Privacy Act, as amended (Conn. Gen. Stat. § 42-526), treats consumer health data as sensitive data requiring opt-in consent. The consent screen described in our Consumer Health Data Privacy Policy obtains that opt-in. Connecticut also gives you rights to access, correct, delete, data portability, and opt-out as described for Colorado above.</p>
+<p><strong>Geofencing.</strong> Conn. Gen. Stat. § 42-526(a)(1)(C) prohibits geofencing within 1,750 feet of any mental health facility or reproductive or sexual health facility. Pace does not implement any geofence and does not use geofencing technology in the app.</p>
+<h3 id="section-9-4">9.4 Virginia, Utah, Indiana, Iowa, Kentucky, Tennessee, Montana, Delaware, New Hampshire, New Jersey, Oregon, Rhode Island</h3>
+<p>If you are a resident of any of these states, your state&rsquo;s comprehensive privacy law gives you rights to access, delete, data portability, opt-out of sale, opt-out of targeted advertising, and (in most states) opt-out of profiling for significant-effect decisions, plus a right to appeal denials. Most of these states also give you a right to correct your personal information; Iowa&rsquo;s law currently does not. Pace does not engage in sale, targeted advertising, or significant-effect profiling — see Section 8.6 for the consequence of that fact for your opt-out rights. For other rights, email legal@usepace.fit.</p>
+<h3 id="section-9-5">9.5 Texas</h3>
+<p>If you are a Texas resident, the Texas Data Privacy and Security Act (Tex. Bus. &amp; Com. Code Ch. 541) gives you rights to access, correct, delete, data portability, and opt-out of sale, targeted advertising, and profiling. Born in Tokyo Digital LLC currently meets the U.S. Small Business Administration definition of a small business and is therefore exempt from most of the TDPSA&rsquo;s substantive requirements under the small-business exemption that the Texas statute provides. Pace remains prohibited from selling sensitive personal data without consent regardless of that exemption, and Pace does not sell any personal data. We honor the rights above operationally as a matter of policy. To exercise: email legal@usepace.fit.</p>
+<h3 id="section-9-6">9.6 Maryland</h3>
+<p>If you are a Maryland resident, the Maryland Online Data Privacy Act (effective October 1, 2025) gives you rights similar to those described above, with stricter limits on the processing of sensitive data and a more demanding data-minimization standard than the Virginia template. Pace&rsquo;s processing limits described in Sections 3 and 4 are designed to satisfy these stricter limits. To exercise rights: email legal@usepace.fit.</p>
+<h3 id="section-9-7">9.7 Minnesota (Pace&rsquo;s home state)</h3>
+<p>If you are a Minnesota resident, the Minnesota Consumer Data Privacy Act (Minn. Stat. Ch. 325M) gives you rights to access, correct, delete, data portability, and opt-out of sale, targeted advertising, and profiling. Born in Tokyo Digital LLC currently meets the U.S. Small Business Administration small-business definition and is exempt from most substantive provisions of the MCDPA. Even as an exempt small business, we may not sell sensitive personal data without consent, and we do not sell any personal data.</p>
+<p><strong>Right to question profiling decisions.</strong> Minnesota uniquely gives you the right to question results of profiling that produces legal or similarly significant effects, including the right to be informed of the reason for a particular outcome and to review the data used. Pace&rsquo;s AI coach does not produce decisions with legal or similarly significant effects. If you have questions about how the coach generated a particular response, email legal@usepace.fit and we will explain to the extent we can.</p>
+<p><strong>Contact for Minnesota AG complaints:</strong> Office of the Minnesota Attorney General, 445 Minnesota Street, Suite 600, St. Paul, MN 55101; (651) 296-3353; PrivacyMN.com.</p>
+<h3 id="section-9-8">9.8 Nebraska</h3>
+<p>If you are a Nebraska resident, the Nebraska Data Privacy Act provides rights to access, correct, delete, data portability, and opt-out of sale, targeted advertising, and profiling. Pace does not engage in these activities. To exercise other rights, email legal@usepace.fit.</p>
+<h3 id="section-9-9">9.9 Florida</h3>
+<p>The Florida Digital Bill of Rights applies primarily to controllers with $1 billion or more in global gross annual revenue. Pace is well below that threshold and is not a covered controller under the FDBR.</p>
+<h3 id="section-9-10">9.10 Washington — see standalone policy</h3>
+<p>Consumer health data of Washington residents is governed by our <strong>Consumer Health Data Privacy Policy</strong> at <a href="https://usepace.fit/health-privacy">https://usepace.fit/health-privacy</a>, which implements the Washington My Health My Data Act. If you are a Washington consumer, that document is the controlling document for your consumer health data.</p>
+<h3 id="section-9-11">9.11 Nevada</h3>
+<p>The Nevada Consumer Health Data Privacy Law (Nev. Rev. Stat., as enacted by SB 370) governs consumer health data of Nevada consumers. Pace does not currently maintain a separate Nevada consumer health data privacy policy. For Nevada-specific consumer health data inquiries, including questions about access, deletion, withdrawal of consent, or appeal, email legal@usepace.fit. We will respond consistent with the Nevada law&rsquo;s requirements as we operationally apply them. Nevada consumers also retain the rights described in this Section 9 to the extent operationally applicable.</p>
+<hr>
+<h2 id="section-10">10. International users (GDPR / UK GDPR)</h2>
+<p>Pace markets and supports the app in US English and is operated from the United States. We do not actively offer goods or services to data subjects in the European Economic Area or the United Kingdom. The Pace app is, however, available through the global Apple App Store, and EEA and UK residents may install and use Pace. If you do, the following applies.</p>
+<p><strong>Lawful bases.</strong> Where the EU General Data Protection Regulation or UK General Data Protection Regulation applies, our lawful bases for processing are:</p>
 <ul>
-<li><strong>Encryption in transit</strong> (HTTPS/TLS for all communication between the app and our servers, between our servers and third parties).</li>
-<li><strong>Encryption at rest</strong> (Supabase encrypts stored data).</li>
-<li><strong>Access controls</strong> (only authorized personnel can access user data, and only for legitimate operational purposes).</li>
-<li><strong>Authentication</strong> (Sign in with Apple uses Apple's secure authentication framework).</li>
+<li><strong>Performance of a contract</strong> (Article 6(1)(b)): processing necessary to provide the Pace Services to you.</li>
+<li><strong>Consent</strong> (Article 6(1)(a) and Article 9(2)(a)): processing of health data and processing for purposes you have consented to through the consent screen described in our Consumer Health Data Privacy Policy.</li>
+<li><strong>Legal obligation</strong> (Article 6(1)(c)): processing required by applicable law.</li>
+<li><strong>Legitimate interests</strong> (Article 6(1)(f)): processing necessary for security, fraud prevention, and the operational stability of Pace.</li>
 </ul>
-<p>No security measures are perfect. While we work hard to protect your information, we cannot guarantee absolute security. If we become aware of a security incident affecting your information, we will notify you in accordance with applicable law.</p>
-<hr />
-<h2 id="9-your-rights-and-choices">9. Your rights and choices</h2>
-<p>Depending on where you live, you may have specific rights over your personal information. Pace honors these rights for all users, regardless of jurisdiction, except where otherwise indicated.</p>
-<h3 id="91-rights-available-to-all-users">9.1 Rights available to all users</h3>
+<p><strong>EU/UK rights.</strong> You have the rights under GDPR / UK GDPR to access, rectification, erasure, restriction of processing, data portability, objection, and not to be subject to solely automated decisions producing legal or similarly significant effects (see Section 14). To exercise: email legal@usepace.fit. You also have the right to lodge a complaint with your national data protection authority.</p>
+<p><strong>International data transfers.</strong> Where EEA or UK personal data is transferred to the United States, transfers are made on the basis of (a) your explicit consent (Article 49(1)(a)) and/or (b) where applicable, the EU-US Data Privacy Framework or UK Extension where the recipient is certified, and/or (c) Standard Contractual Clauses where Pace and a recipient have agreed to them. As Pace scales, we will adopt SCCs across the processor stack.</p>
+<p><strong>EU representative under GDPR Article 27 / UK representative.</strong> Pace does not actively target EEA or UK users. To the extent any EEA or UK user nonetheless uses Pace, we will appoint an Article 27 representative in the EEA, and a UK representative under the UK GDPR, if and when our processing of EEA or UK residents&rsquo; personal data ceases to be incidental — for example, if we begin marketing to EEA or UK users, or if our EEA or UK user base becomes substantial. We will update this section when that occurs.</p>
+<hr>
+<h2 id="section-11">11. Children&rsquo;s privacy</h2>
+<p>Pace is intended for adults. The Pace consent screen requires you to affirm that you are 18 years of age or older before any data collection begins.</p>
+<p>We do not knowingly collect personal information from children under 13. The Children&rsquo;s Online Privacy Protection Act (COPPA) and corresponding rules apply to operators of online services directed to children under 13 or those with actual knowledge of collecting personal information from children under 13. Pace is not directed to children under 13.</p>
+<p>If we learn that personal information of a child under 13 has been collected — for example, because a parent or guardian contacts us, because a user later identifies themselves as a child, or because account data otherwise indicates a user is a child — we will delete the personal information and the associated account. Parents or guardians who believe Pace has collected information from their child may email legal@usepace.fit.</p>
+<hr>
+<h2 id="section-12">12. Data breach notification</h2>
+<p>If we experience a security breach affecting your personal information, we will notify you, regulators, and (if required) the media in accordance with applicable law.</p>
+<p><strong>FTC Health Breach Notification Rule (16 CFR Part 318).</strong> Pace handles personal health information in a way that, in our analysis, makes Pace a vendor of personal health records under the FTC&rsquo;s amended Health Breach Notification Rule effective July 29, 2024. We will comply with the Rule&rsquo;s notification requirements for any qualifying breach of PHR identifiable health information, including notification to affected individuals, the FTC, and (for breaches of 500 or more records) the media, within the timelines the Rule requires (in no case later than 60 calendar days after discovery).</p>
+<p><strong>State breach notification laws.</strong> We will also notify you and applicable state regulators in accordance with the breach notification laws of your state of residence. Where state law and the FTC Rule both apply, we will follow the most stringent applicable timeline.</p>
+<hr>
+<h2 id="section-13">13. Changes to this policy</h2>
+<p>We may update this policy. When we do:</p>
 <ul>
-<li><strong>Access.</strong> You can view your data within the Pace app or request a copy by emailing privacy@usepace.fit.</li>
-<li><strong>Correction.</strong> You can edit your profile information within the app, or request corrections by email.</li>
-<li><strong>Deletion.</strong> You can delete your account from within Pace's Settings. Account deletion removes your data from our active systems immediately and from backups in our ordinary backup cycle.</li>
-<li><strong>Revoke HealthKit access.</strong> You can revoke Pace's access to HealthKit data at any time through iOS Settings → Privacy &amp; Security → Health.</li>
-<li><strong>Withdraw consent.</strong> Where we rely on consent, you can withdraw it at any time.</li>
-<li><strong>Data portability.</strong> You can request a copy of your data in machine-readable format by emailing privacy@usepace.fit.</li>
-<li><strong>Lodge a complaint.</strong> You can file a complaint with your local data protection authority.</li>
+<li>For non-material changes (clarifications, contact information updates, typo corrections), we will update the &ldquo;Last updated&rdquo; date and the version number at the top of the policy.</li>
+<li>For material changes (changes to categories of personal information collected, purposes of processing, recipients, retention, or your rights), we will provide notice through the Pace app and through email to your account email at least 30 days before the change takes effect.</li>
+<li>For material changes to our handling of consumer health data, our Consumer Health Data Privacy Policy describes how we will obtain new affirmative consent before applying the change.</li>
 </ul>
-<h3 id="92-california-residents-ccpa-cpra">9.2 California residents (CCPA / CPRA)</h3>
-<p>California residents have additional rights:</p>
-<ul>
-<li><strong>Right to know</strong> what personal information we have collected about you, including categories, sources, purposes, and recipients.</li>
-<li><strong>Right to delete</strong> your personal information.</li>
-<li><strong>Right to correct</strong> inaccurate personal information.</li>
-<li><strong>Right to opt-out of sale or sharing.</strong> Pace does not sell your personal information and does not share it for cross-context behavioral advertising. There is nothing to opt out of, but you have the right.</li>
-<li><strong>Right to limit use of sensitive personal information.</strong> You can ask us to limit how we use sensitive personal information (such as health and fitness data) to what's necessary to provide the Services.</li>
-<li><strong>Right to non-discrimination.</strong> We will not discriminate against you for exercising your rights.</li>
-</ul>
-<p>To exercise California rights, email privacy@usepace.fit. We will verify your identity (typically by confirming you can access the email associated with your account) and respond within 45 days.</p>
-<h3 id="93-washington-state-residents">9.3 Washington State residents</h3>
-<p>If you are a Washington State resident, please also see our <strong><a href="/health-privacy.html">Consumer Health Data Privacy Policy</a></strong>, which describes additional rights under the Washington My Health My Data Act.</p>
-<hr />
-<h2 id="10-childrens-privacy">10. Children's privacy</h2>
-<p><strong>During the Pace TestFlight beta, the Services are intended only for users who are at least 18 years old.</strong> We do not knowingly permit anyone under 18 to create an account or use the Services during the beta. If we learn that we have collected personal information from a person under 18 in connection with the beta, we will delete that information as required by applicable law.</p>
-<p>If Pace later opens the Services to younger users (after the public App Store launch), we will update this Policy and implement age-appropriate consent controls — including parental consent where required by law — before doing so.</p>
-<hr />
-<h2 id="11-international-users">11. International users</h2>
-<p><strong>Pace is offered only to users located in the United States during the TestFlight beta.</strong> We do not intend to offer the beta to individuals located in the European Economic Area, the United Kingdom, Brazil, Canada, or other jurisdictions outside the United States.</p>
-<p>If you are located outside the United States, do not download, register for, or use Pace during the beta. We may refuse or terminate accounts we identify as created from outside the United States, but we cannot guarantee perfect detection of every user's location, and your responsibility to comply with this restriction does not depend on our ability to detect your location. By using the Services, you represent that you are physically located in the United States.</p>
-<p>International availability and country-specific compliance will be addressed before Pace's public App Store launch.</p>
-<hr />
-<h2 id="12-about-the-testflight-closed-beta">12. About the TestFlight closed beta</h2>
-<p>Pace is currently distributed through Apple's TestFlight program in a closed beta to invited testers. By participating in the TestFlight beta, you acknowledge:</p>
-<ul>
-<li>Pace is pre-release software and may contain bugs, incomplete features, or unexpected behavior.</li>
-<li>This Policy is Version 1.1 and will be reviewed and updated by retained legal counsel before Pace's public App Store launch.</li>
-<li>Beta tester data is handled with the same care as data of any other user, but the closed-beta nature of the program means policies and infrastructure are evolving.</li>
-<li>We may contact you for feedback on the beta experience.</li>
-<li>Your beta testing relationship is governed by Apple's TestFlight terms in addition to this Policy and our Terms of Service.</li>
-</ul>
-<hr />
-<h2 id="13-how-we-update-this-policy">13. How we update this Policy</h2>
-<p>We may update this Policy from time to time. When we make material changes (changes to what we collect, how we use it, or who we share it with), we will:</p>
-<ul>
-<li>Update the "Last Updated" date at the top of this Policy.</li>
-<li>Increment the version number.</li>
-<li>Notify you within the app and/or by email before the change takes effect.</li>
-<li>For material changes affecting consumer health data, obtain your affirmative consent before applying the change to data we already hold.</li>
-</ul>
-<p>For non-material changes (typo fixes, contact information updates, clarifying language), we will update the "Last Updated" date and the minor version number. No notification is required for non-material changes.</p>
-<p>Previous versions of this Policy are available upon request to privacy@usepace.fit.</p>
-<hr />
-<h2 id="14-how-to-contact-us">14. How to contact us</h2>
-<p>For privacy questions, complaints, or to exercise any of your rights:</p>
-<p><strong>Email:</strong> privacy@usepace.fit</p>
+<hr>
+<h2 id="section-14">14. Automated decision-making and AI processing</h2>
+<p>The Pace coach is an AI feature that generates personalized wellness guidance. Pace uses Claude (Anthropic), Grok Vision (xAI), and OpenAI text-embedding-3-small to power Pace features as described in our Consumer Health Data Privacy Policy.</p>
+<p><strong>Pace&rsquo;s AI does not make decisions producing legal or similarly significant effects.</strong> Specifically, Pace&rsquo;s AI coach does not determine, and is not a basis for the determination of, your access to financial services, lending, housing, insurance, education enrollment, employment opportunities, healthcare services, or access to essential goods or services. Pace&rsquo;s coach is informational and offers general wellness guidance, not medical diagnosis, prescription, or treatment.</p>
+<p><strong>Human review.</strong> All AI-generated coaching guidance is informational and is not implemented automatically against your account or your data — you decide what to do with it. Pace&rsquo;s founder reviews user feedback about coaching outputs and uses that review to adjust system behavior.</p>
+<p><strong>Right to know about AI processing.</strong> If you want to know what data was sent to which AI provider in connection with a specific coach response, email legal@usepace.fit and we will provide the information we are able to provide.</p>
+<p><strong>California ADMT regulations.</strong> The CCPA&rsquo;s ADMT regulations effective January 1, 2026 apply to businesses meeting the CCPA&rsquo;s applicability thresholds, and apply ADMT-specific consumer notice, opt-out, and access rights effective January 1, 2027 to ADMT used for &ldquo;significant decisions.&rdquo; As described above, Pace does not currently meet the CCPA thresholds and Pace&rsquo;s AI coaching is not used for &ldquo;significant decisions&rdquo; under that regulation. We will update this section as our position evolves.</p>
+<p><strong>GDPR Article 22.</strong> Article 22 limits decisions based solely on automated processing that produce legal or similarly significant effects. Pace&rsquo;s AI coaching is informational guidance and does not produce such decisions, so Article 22 does not apply to it. If you nonetheless want a human to review any specific Pace AI output, email legal@usepace.fit.</p>
+<hr>
+<h2 id="section-15">15. Contact</h2>
+<p>For privacy questions, to exercise your rights, or to file a complaint:</p>
+<p><strong>Email:</strong> legal@usepace.fit</p>
 <p><strong>Mail:</strong>
 Born in Tokyo Digital LLC
 ATTN: Privacy
 6642 Wildflower Way
-Minnetrista, MN 55331
-USA</p>
-<p>We will acknowledge receipt of your inquiry within 5 business days and provide a substantive response within 45 days.</p>
-<hr />
-<p><em>Born in Tokyo Digital LLC. All rights reserved.</em></p>
-  </article>
-</main>
-
-<footer class="site-footer">
-  <a href="/privacy.html">Privacy</a>
-  <a href="/health-privacy.html">Health Data</a>
-  <a href="/terms.html">Terms</a>
-  <a href="mailto:privacy@usepace.fit">privacy@usepace.fit</a>
-  <div style="margin-top: 12px;">© 2026 Born in Tokyo Digital LLC</div>
-</footer>
-
+Minnetrista, MN 55331</p>
+<p><strong>For Washington consumer health data:</strong> see our Consumer Health Data Privacy Policy at <a href="https://usepace.fit/health-privacy">https://usepace.fit/health-privacy</a>.</p>
+<p><strong>Regulatory complaints by state:</strong>
+- California: California Privacy Protection Agency, www.cppa.ca.gov; California Attorney General, oag.ca.gov
+- Minnesota: Office of the Minnesota Attorney General, www.ag.state.mn.us; PrivacyMN.com
+- Texas: Office of the Texas Attorney General, www.texasattorneygeneral.gov
+- Washington: Office of the Washington Attorney General, www.atg.wa.gov/file-complaint
+- Other states: your state Attorney General&rsquo;s office
+- EEA / UK: your national data protection authority</p>
+<p>To report a privacy concern with Pace specifically, please email us first so we have the opportunity to address it.</p>
+<hr>
+<p><em>Born in Tokyo Digital LLC, EIN 42-2068679. D-U-N-S 145W007149.</em></p>
+  </main>
+  <footer class="site-footer">
+    <p><a href="https://usepace.fit">usepace.fit</a></p>
+    <p>Born in Tokyo Digital LLC · EIN 42-2068679</p>
+    <p class="cross-links">
+      <a href="/privacy">Privacy Policy</a> ·
+      <a href="/health-privacy">Consumer Health Data Privacy Policy</a> ·
+      <a href="/terms">Terms of Service</a>
+    </p>
+  </footer>
 </body>
 </html>

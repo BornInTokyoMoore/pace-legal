@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="index, follow">
+  <title>{{title}} — Pace</title>
+  <meta name="description" content="{{description}}">
+  <link rel="stylesheet" href="/styles.css">
+  <link rel="canonical" href="{{canonical_url}}">
+</head>
+<body>
+  <header class="site-header">
+    <a href="/" class="brand">Pace</a>
+    <nav class="site-nav">
+      <a href="/"{{home_active}}>Home</a>
+      <a href="/privacy"{{privacy_active}}>Privacy</a>
+      <a href="/health-privacy"{{health_active}}>Health Privacy</a>
+      <a href="/terms"{{terms_active}}>Terms</a>
+    </nav>
+  </header>
+  <main class="content">
+    {{content}}
+  </main>
+  <footer class="site-footer">
+    <p><a href="https://usepace.fit">usepace.fit</a></p>
+    <p>Born in Tokyo Digital LLC · EIN 42-2068679</p>
+    <p class="cross-links">
+      <a href="/privacy">Privacy Policy</a> ·
+      <a href="/health-privacy">Consumer Health Data Privacy Policy</a> ·
+      <a href="/terms">Terms of Service</a>
+    </p>
+  </footer>
+</body>
+</html>
